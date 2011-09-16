@@ -1,0 +1,3 @@
+# GPC 8 The Keeper
+
+An entry for the Game Prototype Challenge v8.

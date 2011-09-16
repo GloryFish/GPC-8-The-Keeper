@@ -33,7 +33,6 @@
 		C9AE7C5E1423CA010000A9AC /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
 		C9AE7C611423CA010000A9AC /* TheKeeper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TheKeeper-Info.plist"; sourceTree = "<group>"; };
 		C9AE7C631423CA010000A9AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C9AE7C6B1423CA3B0000A9AC /* ConfigReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConfigReader.hpp; sourceTree = "<group>"; };
 		C9AE7C6C1423CA3B0000A9AC /* Core.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Core.hpp; sourceTree = "<group>"; };
 		C9AE7C6D1423CA3B0000A9AC /* CoreTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CoreTypes.hpp; sourceTree = "<group>"; };
 		C9AE7C6E1423CA3B0000A9AC /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
@@ -126,7 +125,6 @@
 		C9AE7C6A1423CA3B0000A9AC /* GFE */ = {
 			isa = PBXGroup;
 			children = (
-				C9AE7C6B1423CA3B0000A9AC /* ConfigReader.hpp */,
 				C9AE7C6C1423CA3B0000A9AC /* Core.hpp */,
 				C9AE7C6D1423CA3B0000A9AC /* CoreTypes.hpp */,
 				C9AE7C6E1423CA3B0000A9AC /* Game.cpp */,

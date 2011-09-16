@@ -1,8 +1,8 @@
 
-#import "GreenState.hpp"
-#import "Logger.hpp"
+#include "GreenState.hpp"
+#include "Logger.hpp"
 
-#import <assert.h>
+#include <assert.h>
 
 namespace GFE
 {

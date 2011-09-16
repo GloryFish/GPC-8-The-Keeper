@@ -9,7 +9,7 @@
 #ifndef SpaceRoguelike_CoreTypes_h
 #define SpaceRoguelike_CoreTypes_h
 
-#import <string>
+#include <string>
 
 #include <stdint.h>
 

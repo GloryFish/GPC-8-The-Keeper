@@ -21,6 +21,11 @@ namespace Keeper {
     
     void GameState::HandleEvents(sf::Event event) {
         switch (event.Type) {
+            case (sf::Event::KeyPressed):
+                if (event.Key.Code == sf::Keyboard::Escape) {
+                    game->Quit();
+                }
+                break;
             case (sf::Event::MouseButtonPressed):
                 player.SetTarget(game->GetMousePosition());
                 break;

@@ -42,6 +42,7 @@ namespace GFE {
         int Run(void);
         bool IsRunning(void);
         void Quit(int status_code = EXIT_SUCCESS);
+        sf::Vector2f GetMousePosition(void);
     protected:
         virtual void PreInit(void);
         virtual void Init(void);

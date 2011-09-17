@@ -54,6 +54,10 @@ namespace GFE {
         running = false;
     }
     
+    sf::Vector2f Game::GetMousePosition(void) {
+        return (sf::Vector2f)sf::Mouse::GetPosition(window);
+    }
+    
     void Game::PreInit(void) {
         Logger::Log() << "PreInit()";
         

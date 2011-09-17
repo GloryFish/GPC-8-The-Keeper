@@ -19,7 +19,16 @@ namespace Keeper {
         
     }
     
-    void GameState::HandleEvents(sf::Event theEvent) {
+    void GameState::HandleEvents(sf::Event event) {
+        switch (event.Type) {
+            case (sf::Event::MouseButtonPressed):
+                player.SetTarget(game->GetMousePosition());
+                break;
+            default:
+                break;
+        }
+        
+        
     }
     
     void GameState::DoInit(void) {

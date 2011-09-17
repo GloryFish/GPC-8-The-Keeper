@@ -28,7 +28,7 @@ namespace Keeper {
         
         virtual void ReInit(void);
         
-        virtual void HandleEvents(sf::Event theEvent);
+        virtual void HandleEvents(sf::Event event);
         
         virtual void Update(float dt);
         

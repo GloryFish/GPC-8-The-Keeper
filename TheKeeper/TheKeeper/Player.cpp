@@ -103,6 +103,9 @@ namespace Keeper {
     }
     
     void Player::SetTarget(sf::Vector2f theTarget) {
+        GFE::Logger::Log() << "New target: " << theTarget.x << ", " << theTarget.y;
+        GFE::Logger::Log() << "Distance: " << GFE::VectorMath::Distance(GetPosition(), theTarget);
+        
         target = theTarget;
     }
     

@@ -10,6 +10,9 @@
 #include <string>
 #include "GFE/Logger.hpp"
 #include "GameState.hpp"
+#include "ConfigFile.hpp"
+#include "ResourcePath.hpp"
+
 namespace Keeper {
     
     KeeperGame::KeeperGame(const std::string theTitle) : GFE::Game(theTitle) {
@@ -22,6 +25,13 @@ namespace Keeper {
     
     void KeeperGame::Init(void) {
         GFE::Logger::Log() << "SRG Init";
+        
+        ConfigFile config(ResourcePath() + "config.ini");
+        
+        int apples;
+        config.readInto( apples, "apples" );
+        GFE::Logger::Log() << "The number of apples is " << apples;
+        
         stateManager.AddActiveState(new(std::nothrow) Keeper::GameState(this));
         stateManager.GetActiveState();
     }

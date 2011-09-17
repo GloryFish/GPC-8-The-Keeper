@@ -9,7 +9,7 @@
 #ifndef TheKeeper_VectorMath_hpp
 #define TheKeeper_VectorMath_hpp
 
-#import <SFML/Graphics.h>
+#include <SFML/Graphics.hpp>
 
 #include <stdlib.h>
 
@@ -17,17 +17,22 @@ namespace GFE {
     
     
     class VectorMath {
+    public:
         
-        static sf::Vector2f Distance(sf::Vector2f a, sf::Vector2f b) {
-            return Length((b-a));
+        static sf::Vector2f Normalize(sf::Vector2f v) {
+            return v / Length(v);
+        }
+        
+        static float Distance(sf::Vector2f a, sf::Vector2f b) {
+            return Length(b - a);
         }
         
         
-        static float Length(sf:Vector2f v) {
+        static float Length(sf::Vector2f v) {
             return sqrt(abs(v.x * v.y));
         }
         
-    }
+    };
     
     
 }

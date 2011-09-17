@@ -22,11 +22,14 @@ namespace Keeper {
         int current_animation_frame;
         float current_animation_duration;
         float animation_delay;
+        sf::Vector2f target;
+        float speed;
     public:
         
         Player(void);
         ~Player();
         void SetAnimation(std::string animation);
+        void SetTarget(sf::Vector2f theTarget);
         void Update(float dt);
     private:
         void BuildAnimations(ConfigFile config);

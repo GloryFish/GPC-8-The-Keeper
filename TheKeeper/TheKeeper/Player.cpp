@@ -14,12 +14,15 @@
 #include <boost/algorithm/string.hpp>
 #include <boost/lexical_cast.hpp>
 #include <map>
+#include "VectorMath.hpp"
 
 namespace Keeper {
     
     Player::Player(void) : sf::Drawable() {
         // player.ini file contains information about the player's sprites
         ConfigFile config(ResourcePath() + "player.ini");
+        
+        speed = config.read<float>("speed", 100);
         
         std::string texture_file = config.read<std::string>("filename", "spritesheet.png");
         
@@ -34,6 +37,7 @@ namespace Keeper {
         SetAnimation("walk");
 
         SetPosition(50, 50);
+        SetTarget(sf::Vector2f(200, 100));
     }
     
     Player::~Player() {
@@ -98,9 +102,12 @@ namespace Keeper {
         sprite.SetSubRect(animations[current_animation_name][current_animation_frame]);
     }
     
+    void Player::SetTarget(sf::Vector2f theTarget) {
+        target = theTarget;
+    }
+    
     void Player::Update(float dt) {
-        GFE::Logger::Log() << "Player Update - dt: " << dt;
-        
+        // Process animation
         current_animation_duration += dt;
         
         if (current_animation_duration > animation_delay) {
@@ -112,6 +119,28 @@ namespace Keeper {
         }
         
         sprite.SetSubRect(animations[current_animation_name][current_animation_frame]);
+        
+        
+        
+        // Move to target
+        if (GFE::VectorMath::Distance(GetPosition(), target) > 10) {
+            // Get vector pointing at target
+            sf::Vector2f movement = target - GetPosition();
+
+            // Normalize
+            movement = GFE::VectorMath::Normalize(movement);
+            
+            // Multiply by speed
+            movement = movement * speed * dt;
+
+            // Apply movement vector
+            SetPosition(GetPosition() + movement);
+            
+            SetAnimation("walk");
+        } else {
+            SetAnimation("stand");
+        }
+        
     }
     
     void Player::Render(sf::RenderTarget& target, sf::Renderer& renderer) const {

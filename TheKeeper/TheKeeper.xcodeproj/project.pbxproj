@@ -57,6 +57,7 @@
 		C9AE7C8F142427410000A9AC /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 		C9AE7C9014242A810000A9AC /* spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spritesheet.png; sourceTree = "<group>"; };
 		C9AE7C9514244E1E0000A9AC /* player.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = player.ini; sourceTree = "<group>"; };
+		C9AE7C971425486C0000A9AC /* VectorMath.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VectorMath.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +149,7 @@
 				C9AE7C741423CA3B0000A9AC /* Logger.hpp */,
 				C9AE7C751423CA3B0000A9AC /* StateManager.cpp */,
 				C9AE7C761423CA3B0000A9AC /* StateManager.hpp */,
+				C9AE7C971425486C0000A9AC /* VectorMath.hpp */,
 			);
 			path = GFE;
 			sourceTree = "<group>";

@@ -30,9 +30,7 @@ namespace Keeper {
         
         virtual void HandleEvents(sf::Event theEvent);
         
-        virtual void UpdateFixed();
-        
-        virtual void UpdateVariable(float theElapsedTime);
+        virtual void Update(float dt);
         
         virtual void Draw(void);
         

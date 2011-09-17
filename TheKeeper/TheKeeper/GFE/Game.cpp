@@ -8,10 +8,11 @@
 
 #include "Game.hpp"
 #include "Logger.hpp"
-#include "GreenState.hpp"
 #include <iostream>
 #include "ConfigFile.hpp"
 #include "ResourcePath.hpp"
+#include <assert.h>
+#include "IState.hpp"
 
 namespace GFE {
     
@@ -85,9 +86,6 @@ namespace GFE {
         sf::Clock update_clock;
         update_clock.Reset();
         
-        // Update immediately
-        Uint32 next_update = update_clock.GetElapsedTime();
-        
         // Loop while IsRunning returns true
         while(IsRunning() && window.IsOpened()) {
             
@@ -96,7 +94,7 @@ namespace GFE {
             // Check for corrupt state returned by our StateManager
             assert(NULL != currentState && "Game::Loop() received a bad pointer");
             
-            while (update_clock.GetElapsedTime() > next_update) {
+            if (update_clock.GetElapsedTime() > update_rate) {
              
                 sf::Event event;
 
@@ -124,9 +122,11 @@ namespace GFE {
                 }
 
                 // Update current state
-                currentState->UpdateFixed();
-
-                next_update += update_rate;
+                float dt = (float)update_clock.GetElapsedTime() / 1000;
+                
+                currentState->Update(dt);
+                
+                update_clock.Reset();
             }
             
             // Draw current state

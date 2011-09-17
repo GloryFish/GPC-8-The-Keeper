@@ -36,20 +36,13 @@ namespace Keeper {
         // Do nothing yet
     }
     
-    void GameState::UpdateFixed(void) {
-        // Check our App pointer
-        assert(NULL != game && "SplashState::UpdateFixed() bad app pointer, init must be called first");
-        
-        // Drop our state after 10 seconds have elapsed
-        if(false == IsPaused() && GetElapsedTime() > 10.0f)
-        {
-            game->stateManager.RemoveActiveState();
-        }
-    }
-    
-    void GameState::UpdateVariable(float theElapsedTime) {
+    void GameState::Update(float dt) {
         // Check our App pointer
         assert(NULL != game && "SplashState::UpdateVariable() bad app pointer, init must be called first");
+        
+        player.Update(dt);
+        
+        
     }
     
     void GameState::Draw(void) {

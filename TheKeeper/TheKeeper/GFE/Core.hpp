@@ -16,6 +16,5 @@
 #include "Game.hpp"
 #include "IState.hpp"
 #include "StateManager.hpp"
-#include "GreenState.hpp"
 
 #endif

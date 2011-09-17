@@ -115,19 +115,13 @@ namespace GFE {
          * @param[in] theEvent to process from the App class Loop method
          */
         virtual void HandleEvents(sf::Event theEvent) = 0;
-        
-        /**
-         * UpdateFixed is responsible for handling all State fixed update needs for
-         * this State when it is the active State.
-         */
-        virtual void UpdateFixed(void) = 0;
-        
+
         /**
          * UpdateVariable is responsible for handling all State variable update
          * needs for this State when it is the active State.
          * @param[in] theElapsedTime since the last Draw was called
          */
-        virtual void UpdateVariable(float theElapsedTime) = 0;
+        virtual void Update(float dt) = 0;
         
         /**
          * Draw is responsible for handling all Drawing needs for this State

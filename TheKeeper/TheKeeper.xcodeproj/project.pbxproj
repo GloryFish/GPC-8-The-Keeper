@@ -15,7 +15,6 @@
 		C9AE7C5F1423CA010000A9AC /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7C5E1423CA010000A9AC /* nice_music.ogg */; };
 		C9AE7C641423CA010000A9AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7C621423CA010000A9AC /* InfoPlist.strings */; };
 		C9AE7C771423CA3B0000A9AC /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7C6E1423CA3B0000A9AC /* Game.cpp */; };
-		C9AE7C781423CA3B0000A9AC /* GreenState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7C701423CA3B0000A9AC /* GreenState.cpp */; };
 		C9AE7C791423CA3B0000A9AC /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7C731423CA3B0000A9AC /* Logger.cpp */; };
 		C9AE7C7A1423CA3B0000A9AC /* StateManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7C751423CA3B0000A9AC /* StateManager.cpp */; };
 		C9AE7C7D1423CA630000A9AC /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7C7C1423CA630000A9AC /* GameState.cpp */; };
@@ -42,8 +41,6 @@
 		C9AE7C6D1423CA3B0000A9AC /* CoreTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CoreTypes.hpp; sourceTree = "<group>"; };
 		C9AE7C6E1423CA3B0000A9AC /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		C9AE7C6F1423CA3B0000A9AC /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
-		C9AE7C701423CA3B0000A9AC /* GreenState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GreenState.cpp; sourceTree = "<group>"; };
-		C9AE7C711423CA3B0000A9AC /* GreenState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GreenState.hpp; sourceTree = "<group>"; };
 		C9AE7C721423CA3B0000A9AC /* IState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IState.hpp; sourceTree = "<group>"; };
 		C9AE7C731423CA3B0000A9AC /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Logger.cpp; sourceTree = "<group>"; };
 		C9AE7C741423CA3B0000A9AC /* Logger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Logger.hpp; sourceTree = "<group>"; };
@@ -146,8 +143,6 @@
 				C9AE7C6D1423CA3B0000A9AC /* CoreTypes.hpp */,
 				C9AE7C6E1423CA3B0000A9AC /* Game.cpp */,
 				C9AE7C6F1423CA3B0000A9AC /* Game.hpp */,
-				C9AE7C701423CA3B0000A9AC /* GreenState.cpp */,
-				C9AE7C711423CA3B0000A9AC /* GreenState.hpp */,
 				C9AE7C721423CA3B0000A9AC /* IState.hpp */,
 				C9AE7C731423CA3B0000A9AC /* Logger.cpp */,
 				C9AE7C741423CA3B0000A9AC /* Logger.hpp */,
@@ -271,7 +266,6 @@
 				C9AE7C551423CA000000A9AC /* main.cpp in Sources */,
 				C9AE7C571423CA010000A9AC /* ResourcePath.mm in Sources */,
 				C9AE7C771423CA3B0000A9AC /* Game.cpp in Sources */,
-				C9AE7C781423CA3B0000A9AC /* GreenState.cpp in Sources */,
 				C9AE7C791423CA3B0000A9AC /* Logger.cpp in Sources */,
 				C9AE7C7A1423CA3B0000A9AC /* StateManager.cpp in Sources */,
 				C9AE7C7D1423CA630000A9AC /* GameState.cpp in Sources */,

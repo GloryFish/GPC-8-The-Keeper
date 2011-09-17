@@ -23,6 +23,7 @@ namespace Keeper {
         ConfigFile config(ResourcePath() + "player.ini");
         
         speed = config.read<float>("speed", 100);
+        flipped = false;
         
         std::string texture_file = config.read<std::string>("filename", "spritesheet.png");
         
@@ -124,11 +125,12 @@ namespace Keeper {
         sprite.SetSubRect(animations[current_animation_name][current_animation_frame]);
         
         
+        sf::Vector2f movement(0, 0); 
         
         // Move to target
         if (GFE::VectorMath::Distance(GetPosition(), target) > 10) {
             // Get vector pointing at target
-            sf::Vector2f movement = target - GetPosition();
+            movement = target - GetPosition();
 
             // Normalize
             movement = GFE::VectorMath::Normalize(movement);
@@ -140,10 +142,17 @@ namespace Keeper {
             SetPosition(GetPosition() + movement);
             
             SetAnimation("walk");
+            
+            if (movement.x < 0) {
+                flipped = true;
+            } else {
+                flipped = false;
+            }
         } else {
             SetAnimation("stand");
         }
         
+        sprite.FlipX(flipped);
     }
     
     void Player::Render(sf::RenderTarget& target, sf::Renderer& renderer) const {

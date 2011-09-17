@@ -24,6 +24,7 @@ namespace Keeper {
         float animation_delay;
         sf::Vector2f target;
         float speed;
+        bool flipped;
     public:
         
         Player(void);

@@ -127,6 +127,8 @@ namespace GFE {
                 currentState->Update(dt);
                 
                 update_clock.Reset();
+                
+                GFE::Logger::Flush();
             }
             
             // Draw current state

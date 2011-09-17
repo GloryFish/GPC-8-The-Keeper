@@ -27,9 +27,8 @@ namespace GFE {
             return Length(b - a);
         }
         
-        
         static float Length(sf::Vector2f v) {
-            return sqrt(abs(v.x * v.y));
+            return sqrt(v.x * v.x + v.y * v.y);
         }
         
     };

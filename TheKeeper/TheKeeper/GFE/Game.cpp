@@ -10,6 +10,8 @@
 #include "Logger.hpp"
 #include "GreenState.hpp"
 #include <iostream>
+#include "ConfigFile.hpp"
+#include "ResourcePath.hpp"
 
 namespace GFE {
     
@@ -54,8 +56,13 @@ namespace GFE {
     void Game::PreInit(void) {
         Logger::Log() << "PreInit()";
         
-        video_mode.Width = DEFAULT_VIDEO_WIDTH;
-        video_mode.Height = DEFAULT_VIDEO_HEIGHT;
+        ConfigFile config(ResourcePath() + "config.ini");
+        
+        int width = config.read<int>("width", DEFAULT_VIDEO_WIDTH);
+        int height = config.read<int>("height", DEFAULT_VIDEO_HEIGHT);
+
+        video_mode.Width = width;
+        video_mode.Height = height;
         video_mode.BitsPerPixel = DEFAULT_VIDEO_BPP;
 
         // Create a RenderWindow object using VideoMode object above

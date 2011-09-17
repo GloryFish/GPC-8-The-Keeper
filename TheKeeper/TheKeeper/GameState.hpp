@@ -11,10 +11,13 @@
 
 #include <SFML/Graphics.hpp>
 #include "GFE/IState.hpp"
+#include "Player.hpp"
 
 namespace Keeper {
     
     class GameState : public GFE::IState {
+    
+        Player player;
         
     public:
         GameState(GFE::Game* theGame);

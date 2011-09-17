@@ -13,7 +13,6 @@
 namespace Keeper {
     
     GameState::GameState(GFE::Game* theGame) : IState("Game", theGame) {
-        
     }
     
     GameState::~GameState(void) {
@@ -58,6 +57,8 @@ namespace Keeper {
         assert(NULL != game && "SplashState::Draw() bad app pointer, init must be called first");
         
         game->window.Clear(sf::Color::Green);
+        
+        game->window.Draw(player);
     }
     
     void GameState::Cleanup(void) {

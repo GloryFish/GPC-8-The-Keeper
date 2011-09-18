@@ -62,7 +62,11 @@ namespace Keeper {
         assert(NULL != game && "SplashState::UpdateVariable() bad app pointer, init must be called first");
         
         player.Update(dt);
-        camera.SetTarget(player.GetPosition());
+        
+        sf::IntRect bounds(sf::Vector2i(0, 0), sf::Vector2i(background.GetSize().x, background.GetSize().y));
+        
+        camera.SetBounds(bounds);
+        camera.SetFocus(player.GetPosition());
         camera.Update(dt);
         game->SetView(camera.GetView());
 

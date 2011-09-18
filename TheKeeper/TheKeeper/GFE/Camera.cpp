@@ -12,35 +12,42 @@
 namespace GFE {
     
     Camera::Camera() {
-        target = sf::Vector2f(0, 0);
-        speed = 150;
+        focus = sf::Vector2f(0, 0);
+        bounds = sf::IntRect(0, 0, 100, 100);
+        deadzone = 50;
     }
     
     void Camera::Reset(sf::FloatRect rect) {
         view.Reset(rect);
     }
     
-    void Camera::SetTarget(sf::Vector2f theTarget) {
-        target = theTarget;
+    void Camera::SetFocus(sf::Vector2f theFocus) {
+        focus = theFocus;
     }
-    
-    void Camera::Update(float dt) {
-        sf::Vector2f movement(0, 0); 
+
+    void Camera::SetBounds(sf::IntRect theBounds) {
         
-        // Move to target
-        if (GFE::VectorMath::Distance(view.GetCenter(), target) > 3) {
-            // Get vector pointing at target
-            movement = target - view.GetCenter();
-            
-            // Normalize
-            movement = GFE::VectorMath::Normalize(movement);
-            
-            // Multiply by speed
-            movement = movement * speed * dt;
-            
-            // Apply movement vector
-            view.Move(movement);
+        bounds = theBounds;
+    }
+
+    void Camera::Update(float dt) {
+        // This particular implementation only pans left and right
+        sf::Vector2f pos = view.GetCenter();
+        
+        if (GFE::VectorMath::Distance(view.GetCenter(), focus) > deadzone) {
+            pos.x -= (pos.x - focus.x) * dt;
         }
+
+        sf::Vector2f half_size = view.GetSize() / 2.0f;
+        
+        if (pos.x - half_size.x < bounds.Left) {
+            pos.x = bounds.Left + half_size.x;
+        }
+        if (pos.x + half_size.x > bounds.Left + bounds.Width) {
+            pos.x = bounds.Left + bounds.Width - half_size.x;
+        }
+        
+        view.SetCenter(pos);
     }
     
     sf::View& Camera::GetView(void) {

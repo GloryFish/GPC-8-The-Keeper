@@ -16,13 +16,15 @@ namespace GFE {
     class Camera {
         
         sf::View view;
-        sf::Vector2f target;
-        float speed;
+        sf::Vector2f focus;
+        float deadzone;
+        sf::IntRect bounds;
         
     public:
         Camera();
         void Reset(sf::FloatRect rect);
-        void SetTarget(sf::Vector2f theTarget);
+        void SetFocus(sf::Vector2f theFocus);
+        void SetBounds(sf::IntRect theBounds);
         void Update(float dt);
         sf::View& GetView(void);
     };

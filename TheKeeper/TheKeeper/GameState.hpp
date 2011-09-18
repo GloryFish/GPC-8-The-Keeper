@@ -29,6 +29,7 @@ namespace Keeper {
         sf::Music music;
         std::vector<GFE::Entity*> objects;
         std::vector<Trashcan*> cans;
+        bool mouse_down;
         
     public:
         GameState(GFE::Game* theGame);

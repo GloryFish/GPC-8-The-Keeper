@@ -15,6 +15,8 @@
 namespace Keeper {
     
     GameState::GameState(GFE::Game* theGame) : IState("Game", theGame) {
+        mouse_down = false;
+        
         background_image.LoadFromFile(ResourcePath() + "scene.png");
         background = sf::Sprite(background_image);
         background.SetScale(4, 4);
@@ -45,7 +47,7 @@ namespace Keeper {
             objects.push_back(can);
         }
 
-}
+    }
     
     GameState::~GameState(void) {
         // delete Trashcans
@@ -62,14 +64,11 @@ namespace Keeper {
                 }
                 break;
             case (sf::Event::MouseButtonPressed):
-                player.SetTarget(game->GetMousePositionRelative());
-//                
-//                if (can.IsTipped()) {
-//                    can.Reset();
-//                } else {
-//                    can.Tip();
-//                }
-                
+                mouse_down = true;
+                break;
+            case (sf::Event::MouseButtonReleased):
+                player.SetTarget(player.GetPosition());
+                mouse_down = false;
                 break;
             default:
                 break;
@@ -94,6 +93,10 @@ namespace Keeper {
         // Check our App pointer
         assert(NULL != game && "SplashState::UpdateVariable() bad app pointer, init must be called first");
         
+        if (mouse_down) {
+            player.SetTarget(game->GetMousePositionRelative());
+        }
+        
         player.Update(dt);
         
         sf::IntRect bounds(sf::Vector2i(0, 0), sf::Vector2i(background.GetSize().x, background.GetSize().y));
@@ -102,7 +105,6 @@ namespace Keeper {
         camera.SetFocus(player.GetPosition());
         camera.Update(dt);
         game->SetView(camera.GetView());
-
     }
     
     void GameState::Draw(void) {

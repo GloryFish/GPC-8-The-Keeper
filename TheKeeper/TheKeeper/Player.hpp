@@ -11,9 +11,10 @@
 
 #include <SFML/Graphics.hpp>
 #include "ConfigFile.hpp"
+#include "Entity.hpp"
 
 namespace Keeper {
-    class Player : public sf::Drawable {
+    class Player : public GFE::Entity {
         sf::Texture spritesheet;
         sf::Sprite sprite;
         std::map<std::string, std::vector<sf::IntRect> > animations;

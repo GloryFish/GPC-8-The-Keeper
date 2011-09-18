@@ -15,6 +15,7 @@
 #include "Trashcan.hpp"
 #include "Camera.hpp"
 #include <SFML/Audio.hpp>
+#include "Entity.hpp"
 
 namespace Keeper {
     
@@ -22,12 +23,13 @@ namespace Keeper {
     
         Player player;
         Trashcan can;
+        Trashcan can2;
         sf::Texture background_image;
         sf::Sprite background;
         GFE::Camera camera;
         sf::View view;
         sf::Music music;
-        
+        std::vector<GFE::Entity*> objects;
         
     public:
         GameState(GFE::Game* theGame);
@@ -51,6 +53,7 @@ namespace Keeper {
     private:
         
     };
+    
 }
 
 #endif

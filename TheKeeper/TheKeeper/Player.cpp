@@ -19,7 +19,7 @@
 
 namespace Keeper {
     
-    Player::Player(void) : sf::Drawable() {
+    Player::Player(void) : GFE::Entity() {
         // player.ini file contains information about the player's sprites
         ConfigFile config(ResourcePath() + "player.ini");
         

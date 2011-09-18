@@ -11,9 +11,10 @@
 
 #include <SFML/Graphics.hpp>
 #include "ConfigFile.hpp"
+#include "Entity.hpp"
 
 namespace Keeper {
-    class Trashcan : public sf::Drawable {
+    class Trashcan : public GFE::Entity {
         sf::Texture spritesheet;
         sf::Sprite sprite;
         sf::IntRect upright_frame;

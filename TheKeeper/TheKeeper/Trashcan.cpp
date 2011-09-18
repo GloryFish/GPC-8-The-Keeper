@@ -12,7 +12,7 @@
 #include "TextureManager.hpp"
 
 namespace Keeper {
-    Trashcan::Trashcan(void) : sf::Drawable() {
+    Trashcan::Trashcan(void) : GFE::Entity() {
         ConfigFile config(ResourcePath() + "trashcan.ini");
 
         std::string texture_file = config.read<std::string>("filename", "spritesheet.png");

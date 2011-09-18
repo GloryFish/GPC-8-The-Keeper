@@ -36,6 +36,13 @@ namespace Keeper {
         
         can.SetPosition(300, 220);
         can.Tip();
+
+        can2.SetPosition(500, 320);
+        can2.Tip();
+
+        objects.push_back(&player);
+        objects.push_back(&can);
+        objects.push_back(&can2);
     }
     
     GameState::~GameState(void) {
@@ -51,12 +58,12 @@ namespace Keeper {
                 break;
             case (sf::Event::MouseButtonPressed):
                 player.SetTarget(game->GetMousePositionRelative());
-                
-                if (can.IsTipped()) {
-                    can.Reset();
-                } else {
-                    can.Tip();
-                }
+//                
+//                if (can.IsTipped()) {
+//                    can.Reset();
+//                } else {
+//                    can.Tip();
+//                }
                 
                 break;
             default:
@@ -99,8 +106,16 @@ namespace Keeper {
         
         game->window.Clear(sf::Color(64, 64, 64, 255));
         game->window.Draw(background);
-        game->window.Draw(player);
-        game->window.Draw(can);
+//        game->window.Draw(player);
+//        game->window.Draw(can);
+
+        std::sort(objects.begin(), objects.end(), GFE::SortEntities);
+        
+        for (std::vector<GFE::Entity*>::iterator iter = objects.begin(); iter < objects.end(); ++iter) {
+            game->window.Draw(**iter);
+        }
+        
+        
     }
     
     void GameState::Cleanup(void) {

@@ -166,7 +166,4 @@ namespace Keeper {
     void Player::Render(sf::RenderTarget& target, sf::Renderer& renderer) const {
         target.Draw(sprite);
     }
-    
-    
-    
 }

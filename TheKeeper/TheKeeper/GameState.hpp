@@ -12,6 +12,7 @@
 #include <SFML/Graphics.hpp>
 #include "GFE/IState.hpp"
 #include "Player.hpp"
+#include "Trashcan.hpp"
 #include "Camera.hpp"
 #include <SFML/Audio.hpp>
 
@@ -20,11 +21,13 @@ namespace Keeper {
     class GameState : public GFE::IState {
     
         Player player;
+        Trashcan can;
         sf::Texture background_image;
         sf::Sprite background;
         GFE::Camera camera;
         sf::View view;
         sf::Music music;
+        
         
     public:
         GameState(GFE::Game* theGame);

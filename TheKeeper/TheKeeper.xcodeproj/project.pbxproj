@@ -24,7 +24,9 @@
 		C9AE7C99142562960000A9AC /* scene.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7C98142562960000A9AC /* scene.png */; };
 		C9AE7C9B14257C130000A9AC /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7C9A14257C130000A9AC /* Camera.cpp */; };
 		C9AE7CA01425A3840000A9AC /* fruit_fly.ogg in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7C9F1425A3840000A9AC /* fruit_fly.ogg */; };
+		C9AE7CA31425A52D0000A9AC /* Trashcan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7CA21425A52D0000A9AC /* Trashcan.cpp */; };
 		C9AE7CA61425A5CA0000A9AC /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7CA51425A5CA0000A9AC /* TextureManager.cpp */; };
+		C9AE7CA81425ABA80000A9AC /* trashcan.ini in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7CA71425ABA80000A9AC /* trashcan.ini */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,8 +62,11 @@
 		C9AE7C9A14257C130000A9AC /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
 		C9AE7C9C14257C1C0000A9AC /* Camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
 		C9AE7C9F1425A3840000A9AC /* fruit_fly.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = fruit_fly.ogg; sourceTree = "<group>"; };
+		C9AE7CA11425A51D0000A9AC /* Trashcan.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trashcan.hpp; sourceTree = "<group>"; };
+		C9AE7CA21425A52D0000A9AC /* Trashcan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Trashcan.cpp; sourceTree = "<group>"; };
 		C9AE7CA41425A5C20000A9AC /* TextureManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TextureManager.hpp; sourceTree = "<group>"; };
 		C9AE7CA51425A5CA0000A9AC /* TextureManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureManager.cpp; sourceTree = "<group>"; };
+		C9AE7CA71425ABA80000A9AC /* trashcan.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trashcan.ini; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +132,7 @@
 				C9AE7C9014242A810000A9AC /* spritesheet.png */,
 				C9AE7C8A142423500000A9AC /* config.ini */,
 				C9AE7C9514244E1E0000A9AC /* player.ini */,
+				C9AE7CA71425ABA80000A9AC /* trashcan.ini */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -184,6 +190,8 @@
 			children = (
 				C9AE7C8F142427410000A9AC /* Player.hpp */,
 				C9AE7C8D142427350000A9AC /* Player.cpp */,
+				C9AE7CA11425A51D0000A9AC /* Trashcan.hpp */,
+				C9AE7CA21425A52D0000A9AC /* Trashcan.cpp */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -245,6 +253,7 @@
 				C9AE7C9614244E1E0000A9AC /* player.ini in Resources */,
 				C9AE7C99142562960000A9AC /* scene.png in Resources */,
 				C9AE7CA01425A3840000A9AC /* fruit_fly.ogg in Resources */,
+				C9AE7CA81425ABA80000A9AC /* trashcan.ini in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +290,7 @@
 				C9AE7C891423E2BC0000A9AC /* ConfigFile.cpp in Sources */,
 				C9AE7C8E142427350000A9AC /* Player.cpp in Sources */,
 				C9AE7C9B14257C130000A9AC /* Camera.cpp in Sources */,
+				C9AE7CA31425A52D0000A9AC /* Trashcan.cpp in Sources */,
 				C9AE7CA61425A5CA0000A9AC /* TextureManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

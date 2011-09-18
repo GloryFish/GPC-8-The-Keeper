@@ -33,6 +33,9 @@ namespace Keeper {
         
         // Play it
         music.Play();
+        
+        can.SetPosition(300, 220);
+        can.Tip();
     }
     
     GameState::~GameState(void) {
@@ -48,6 +51,13 @@ namespace Keeper {
                 break;
             case (sf::Event::MouseButtonPressed):
                 player.SetTarget(game->GetMousePositionRelative());
+                
+                if (can.IsTipped()) {
+                    can.Reset();
+                } else {
+                    can.Tip();
+                }
+                
                 break;
             default:
                 break;
@@ -90,6 +100,7 @@ namespace Keeper {
         game->window.Clear(sf::Color(64, 64, 64, 255));
         game->window.Draw(background);
         game->window.Draw(player);
+        game->window.Draw(can);
     }
     
     void GameState::Cleanup(void) {

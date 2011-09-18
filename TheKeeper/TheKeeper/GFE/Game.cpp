@@ -57,7 +57,12 @@ namespace GFE {
     sf::Vector2f Game::GetMousePosition(void) {
         return (sf::Vector2f)sf::Mouse::GetPosition(window);
     }
-    
+
+    sf::Vector2f Game::GetMousePositionRelative(void) {
+        sf::Vector2i pos = sf::Mouse::GetPosition(window);
+        return window.ConvertCoords(pos.x, pos.y);
+    }
+
     void Game::SetView(sf::View& view) {
         window.SetView(view);
     }

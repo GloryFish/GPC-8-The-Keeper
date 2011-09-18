@@ -43,6 +43,7 @@ namespace GFE {
         bool IsRunning(void);
         void Quit(int status_code = EXIT_SUCCESS);
         sf::Vector2f GetMousePosition(void);
+        sf::Vector2f GetMousePositionRelative(void);
         void SetView(sf::View& view);
         sf::FloatRect GetDisplayRect(void);
         

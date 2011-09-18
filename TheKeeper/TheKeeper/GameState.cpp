@@ -36,7 +36,7 @@ namespace Keeper {
                 }
                 break;
             case (sf::Event::MouseButtonPressed):
-                player.SetTarget(game->GetMousePosition());
+                player.SetTarget(game->GetMousePositionRelative());
                 break;
             default:
                 break;

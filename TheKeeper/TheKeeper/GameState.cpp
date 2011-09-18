@@ -19,6 +19,9 @@ namespace Keeper {
         background.SetScale(4, 4);
         background.SetOrigin(0, 0);
         background.SetPosition(0, 0);
+        
+        camera.Reset(game->GetDisplayRect());
+        game->SetView(camera.GetView());
     }
     
     GameState::~GameState(void) {
@@ -59,6 +62,10 @@ namespace Keeper {
         assert(NULL != game && "SplashState::UpdateVariable() bad app pointer, init must be called first");
         
         player.Update(dt);
+        camera.SetTarget(player.GetPosition());
+        camera.Update(dt);
+        game->SetView(camera.GetView());
+
     }
     
     void GameState::Draw(void) {

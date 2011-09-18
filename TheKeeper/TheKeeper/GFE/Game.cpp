@@ -58,6 +58,14 @@ namespace GFE {
         return (sf::Vector2f)sf::Mouse::GetPosition(window);
     }
     
+    void Game::SetView(sf::View& view) {
+        window.SetView(view);
+    }
+
+    sf::FloatRect Game::GetDisplayRect(void) {
+        return sf::FloatRect(0, 0, window.GetWidth(), window.GetHeight());
+    }
+    
     void Game::PreInit(void) {
         Logger::Log() << "PreInit()";
         
@@ -75,7 +83,6 @@ namespace GFE {
 
         // Use Vertical Sync
         window.EnableVerticalSync(true);
-        
     }
 
     void Game::Init(void) {

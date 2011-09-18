@@ -12,6 +12,7 @@
 #include <SFML/Graphics.hpp>
 #include "GFE/IState.hpp"
 #include "Player.hpp"
+#include "Camera.hpp"
 
 namespace Keeper {
     
@@ -20,7 +21,9 @@ namespace Keeper {
         Player player;
         sf::Texture background_image;
         sf::Sprite background;
-
+        GFE::Camera camera;
+        sf::View view;
+        
     public:
         GameState(GFE::Game* theGame);
         

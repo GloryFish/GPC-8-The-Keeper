@@ -83,8 +83,9 @@ namespace GFE {
         video_mode.Height = height;
         video_mode.BitsPerPixel = DEFAULT_VIDEO_BPP;
 
+        
         // Create a RenderWindow object using VideoMode object above
-        window.Create(video_mode, title, sf::Style::Default, context_settings);
+        window.Create(video_mode, title, sf::Style::Titlebar | sf::Style::Close, context_settings);
 
         // Use Vertical Sync
         window.EnableVerticalSync(true);

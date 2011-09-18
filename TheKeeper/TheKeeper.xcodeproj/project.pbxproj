@@ -24,6 +24,7 @@
 		C9AE7C99142562960000A9AC /* scene.png in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7C98142562960000A9AC /* scene.png */; };
 		C9AE7C9B14257C130000A9AC /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7C9A14257C130000A9AC /* Camera.cpp */; };
 		C9AE7CA01425A3840000A9AC /* fruit_fly.ogg in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7C9F1425A3840000A9AC /* fruit_fly.ogg */; };
+		C9AE7CA61425A5CA0000A9AC /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7CA51425A5CA0000A9AC /* TextureManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		C9AE7C9A14257C130000A9AC /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
 		C9AE7C9C14257C1C0000A9AC /* Camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
 		C9AE7C9F1425A3840000A9AC /* fruit_fly.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = fruit_fly.ogg; sourceTree = "<group>"; };
+		C9AE7CA41425A5C20000A9AC /* TextureManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TextureManager.hpp; sourceTree = "<group>"; };
+		C9AE7CA51425A5CA0000A9AC /* TextureManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureManager.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 				C9AE7C971425486C0000A9AC /* VectorMath.hpp */,
 				C9AE7C9A14257C130000A9AC /* Camera.cpp */,
 				C9AE7C9C14257C1C0000A9AC /* Camera.hpp */,
+				C9AE7CA41425A5C20000A9AC /* TextureManager.hpp */,
+				C9AE7CA51425A5CA0000A9AC /* TextureManager.cpp */,
 			);
 			path = GFE;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				C9AE7C891423E2BC0000A9AC /* ConfigFile.cpp in Sources */,
 				C9AE7C8E142427350000A9AC /* Player.cpp in Sources */,
 				C9AE7C9B14257C130000A9AC /* Camera.cpp in Sources */,
+				C9AE7CA61425A5CA0000A9AC /* TextureManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

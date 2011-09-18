@@ -15,6 +15,7 @@
 #include <boost/lexical_cast.hpp>
 #include <map>
 #include "VectorMath.hpp"
+#include "GFE/TextureManager.hpp"
 
 namespace Keeper {
     
@@ -27,8 +28,7 @@ namespace Keeper {
         
         std::string texture_file = config.read<std::string>("filename", "spritesheet.png");
         
-        spritesheet = sf::Texture();
-        spritesheet.LoadFromFile(ResourcePath() + texture_file);
+        spritesheet = GFE::TextureManager::GetTexture(texture_file);
         sprite = sf::Sprite(spritesheet);
         int scale = config.read<int>("scale", 4);
         sprite.SetScale(scale, scale);

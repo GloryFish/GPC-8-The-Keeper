@@ -18,7 +18,6 @@ namespace Keeper {
         sf::Texture spritesheet;
         sf::Sprite sprite;
         std::map<std::string, std::vector<sf::IntRect> > animations;
-        sf::Rect<int> stand_frame;
         std::string current_animation_name;
         int current_animation_frame;
         float current_animation_duration;

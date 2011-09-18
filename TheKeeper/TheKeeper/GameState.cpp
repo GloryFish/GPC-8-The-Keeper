@@ -9,10 +9,16 @@
 #include "GameState.hpp"
 #include "GFE/Logger.hpp"
 #include "assert.h"
+#include "ResourcePath.hpp"
 
 namespace Keeper {
     
     GameState::GameState(GFE::Game* theGame) : IState("Game", theGame) {
+        background_image.LoadFromFile(ResourcePath() + "scene.png");
+        background = sf::Sprite(background_image);
+        background.SetScale(4, 4);
+        background.SetOrigin(0, 0);
+        background.SetPosition(0, 0);
     }
     
     GameState::~GameState(void) {
@@ -32,8 +38,6 @@ namespace Keeper {
             default:
                 break;
         }
-        
-        
     }
     
     void GameState::DoInit(void) {
@@ -55,16 +59,14 @@ namespace Keeper {
         assert(NULL != game && "SplashState::UpdateVariable() bad app pointer, init must be called first");
         
         player.Update(dt);
-        
-        
     }
     
     void GameState::Draw(void) {
         // Check our App pointer
         assert(NULL != game && "SplashState::Draw() bad app pointer, init must be called first");
         
-        game->window.Clear(sf::Color::Green);
-        
+        game->window.Clear(sf::Color(64, 64, 64, 255));
+        game->window.Draw(background);
         game->window.Draw(player);
     }
     

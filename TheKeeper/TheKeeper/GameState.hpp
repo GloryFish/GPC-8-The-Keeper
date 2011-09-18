@@ -18,7 +18,9 @@ namespace Keeper {
     class GameState : public GFE::IState {
     
         Player player;
-        
+        sf::Texture background_image;
+        sf::Sprite background;
+
     public:
         GameState(GFE::Game* theGame);
         

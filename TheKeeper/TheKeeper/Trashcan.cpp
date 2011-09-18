@@ -9,7 +9,7 @@
 #include "Trashcan.hpp"
 #include "ResourcePath.hpp"
 #include "ConfigFile.hpp"
-#include "TextureManager.hpp"
+#include "GFE/TextureManager.hpp"
 
 namespace Keeper {
     Trashcan::Trashcan(void) : GFE::Entity() {

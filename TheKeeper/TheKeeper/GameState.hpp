@@ -13,7 +13,7 @@
 #include "GFE/IState.hpp"
 #include "Player.hpp"
 #include "Trashcan.hpp"
-#include "Camera.hpp"
+#include "GFE/Camera.hpp"
 #include <SFML/Audio.hpp>
 #include "GFE/Entity.hpp"
 

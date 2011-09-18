@@ -112,6 +112,10 @@ namespace Keeper {
         GFE::Logger::Log() << "Distance: " << GFE::VectorMath::Distance(GetPosition(), theTarget);
         
         target = theTarget;
+        
+        if (target.y < 185) {
+            target.y = 185;
+        }
     }
     
     void Player::Update(float dt) {

@@ -1,3 +1,8 @@
 # GPC 8 The Keeper
 
-An entry for the Game Prototype Challenge v8.
+A garbage man attempts to fight entropy.
+
+
+## Music
+
+[Fruit fly](https://8bc.org/music/Kubbi/Fruit+fly/) by [Kubbi](https://8bc.org/members/Kubbi/)

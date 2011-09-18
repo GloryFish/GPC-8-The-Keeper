@@ -13,6 +13,7 @@
 #include "GFE/IState.hpp"
 #include "Player.hpp"
 #include "Camera.hpp"
+#include <SFML/Audio.hpp>
 
 namespace Keeper {
     
@@ -23,6 +24,7 @@ namespace Keeper {
         sf::Sprite background;
         GFE::Camera camera;
         sf::View view;
+        sf::Music music;
         
     public:
         GameState(GFE::Game* theGame);

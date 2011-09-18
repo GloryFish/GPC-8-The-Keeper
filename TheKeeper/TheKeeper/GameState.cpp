@@ -10,6 +10,7 @@
 #include "GFE/Logger.hpp"
 #include "assert.h"
 #include "ResourcePath.hpp"
+#include <SFML/Audio.hpp>
 
 namespace Keeper {
     
@@ -22,6 +23,16 @@ namespace Keeper {
         
         camera.Reset(game->GetDisplayRect());
         game->SetView(camera.GetView());
+        
+        // Open it from an audio file
+        music.OpenFromFile(ResourcePath() + "fruit_fly.ogg");
+        
+        // Change some parameters
+        music.SetVolume(50);
+        music.SetLoop(true);
+        
+        // Play it
+        music.Play();
     }
     
     GameState::~GameState(void) {

@@ -11,7 +11,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "ConfigFile.hpp"
-#include "Entity.hpp"
+#include "GFE/Entity.hpp"
 
 namespace Keeper {
     class Trashcan : public GFE::Entity {

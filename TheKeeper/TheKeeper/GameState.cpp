@@ -113,8 +113,6 @@ namespace Keeper {
         
         game->window.Clear(sf::Color(64, 64, 64, 255));
         game->window.Draw(background);
-//        game->window.Draw(player);
-//        game->window.Draw(can);
 
         std::sort(objects.begin(), objects.end(), GFE::SortEntities);
         

@@ -27,7 +27,8 @@
 		C9AE7CA31425A52D0000A9AC /* Trashcan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7CA21425A52D0000A9AC /* Trashcan.cpp */; };
 		C9AE7CA61425A5CA0000A9AC /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7CA51425A5CA0000A9AC /* TextureManager.cpp */; };
 		C9AE7CA81425ABA80000A9AC /* trashcan.ini in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7CA71425ABA80000A9AC /* trashcan.ini */; };
-		C9AE7CAB1425C1780000A9AC /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7CAA1425C1780000A9AC /* Entity.cpp */; };
+		C9AE7CAE1426925A0000A9AC /* Pedestrian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7CAD1426925A0000A9AC /* Pedestrian.cpp */; };
+		C9AE7CB1142692A20000A9AC /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7CAF142692A00000A9AC /* Entity.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,8 +69,10 @@
 		C9AE7CA41425A5C20000A9AC /* TextureManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TextureManager.hpp; sourceTree = "<group>"; };
 		C9AE7CA51425A5CA0000A9AC /* TextureManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureManager.cpp; sourceTree = "<group>"; };
 		C9AE7CA71425ABA80000A9AC /* trashcan.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trashcan.ini; sourceTree = "<group>"; };
-		C9AE7CA91425C1070000A9AC /* Entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Entity.hpp; path = ../Entity.hpp; sourceTree = "<group>"; };
-		C9AE7CAA1425C1780000A9AC /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Entity.cpp; path = ../Entity.cpp; sourceTree = "<group>"; };
+		C9AE7CAC142692510000A9AC /* Pedestrian.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Pedestrian.hpp; sourceTree = "<group>"; };
+		C9AE7CAD1426925A0000A9AC /* Pedestrian.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pedestrian.cpp; sourceTree = "<group>"; };
+		C9AE7CAF142692A00000A9AC /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		C9AE7CB0142692A10000A9AC /* Entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +155,8 @@
 		C9AE7C6A1423CA3B0000A9AC /* GFE */ = {
 			isa = PBXGroup;
 			children = (
-				C9AE7CA91425C1070000A9AC /* Entity.hpp */,
-				C9AE7CAA1425C1780000A9AC /* Entity.cpp */,
+				C9AE7CAF142692A00000A9AC /* Entity.cpp */,
+				C9AE7CB0142692A10000A9AC /* Entity.hpp */,
 				C9AE7C6C1423CA3B0000A9AC /* Core.hpp */,
 				C9AE7C6D1423CA3B0000A9AC /* CoreTypes.hpp */,
 				C9AE7C6E1423CA3B0000A9AC /* Game.cpp */,
@@ -197,6 +200,8 @@
 				C9AE7C8D142427350000A9AC /* Player.cpp */,
 				C9AE7CA11425A51D0000A9AC /* Trashcan.hpp */,
 				C9AE7CA21425A52D0000A9AC /* Trashcan.cpp */,
+				C9AE7CAC142692510000A9AC /* Pedestrian.hpp */,
+				C9AE7CAD1426925A0000A9AC /* Pedestrian.cpp */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -297,7 +302,8 @@
 				C9AE7C9B14257C130000A9AC /* Camera.cpp in Sources */,
 				C9AE7CA31425A52D0000A9AC /* Trashcan.cpp in Sources */,
 				C9AE7CA61425A5CA0000A9AC /* TextureManager.cpp in Sources */,
-				C9AE7CAB1425C1780000A9AC /* Entity.cpp in Sources */,
+				C9AE7CAE1426925A0000A9AC /* Pedestrian.cpp in Sources */,
+				C9AE7CB1142692A20000A9AC /* Entity.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

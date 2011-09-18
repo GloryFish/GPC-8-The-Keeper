@@ -15,7 +15,7 @@
 #include "Trashcan.hpp"
 #include "Camera.hpp"
 #include <SFML/Audio.hpp>
-#include "Entity.hpp"
+#include "GFE/Entity.hpp"
 
 namespace Keeper {
     

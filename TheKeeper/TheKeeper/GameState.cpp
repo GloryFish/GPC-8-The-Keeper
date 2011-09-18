@@ -34,19 +34,24 @@ namespace Keeper {
         // Play it
         music.Play();
         
-        can.SetPosition(300, 220);
-        can.Tip();
-
-        can2.SetPosition(500, 320);
-        can2.Tip();
-
+        // Add player to scene list
         objects.push_back(&player);
-        objects.push_back(&can);
-        objects.push_back(&can2);
-    }
+
+        
+        // Create trashcans
+        for (int x = 100; x <= 1200; x += 200) {
+            Trashcan* can = new Trashcan(x, 220);
+            cans.push_back(can);
+            objects.push_back(can);
+        }
+
+}
     
     GameState::~GameState(void) {
-        
+        // delete Trashcans
+        for (std::vector<Trashcan*>::iterator iter = cans.begin(); iter < cans.end(); ++iter) {
+            delete *iter;
+        }
     }
     
     void GameState::HandleEvents(sf::Event event) {

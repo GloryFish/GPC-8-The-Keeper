@@ -22,14 +22,13 @@ namespace Keeper {
     class GameState : public GFE::IState {
     
         Player player;
-        Trashcan can;
-        Trashcan can2;
         sf::Texture background_image;
         sf::Sprite background;
         GFE::Camera camera;
         sf::View view;
         sf::Music music;
         std::vector<GFE::Entity*> objects;
+        std::vector<Trashcan*> cans;
         
     public:
         GameState(GFE::Game* theGame);

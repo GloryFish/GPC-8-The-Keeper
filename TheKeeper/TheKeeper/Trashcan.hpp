@@ -23,6 +23,7 @@ namespace Keeper {
         
     public:
         Trashcan(void);
+        Trashcan(float x, float y);
         ~Trashcan();
         void Tip(void);
         bool IsTipped(void);

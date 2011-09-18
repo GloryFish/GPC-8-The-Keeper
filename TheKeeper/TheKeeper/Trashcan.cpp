@@ -28,7 +28,26 @@ namespace Keeper {
         
         Reset();
     }
-    
+
+    Trashcan::Trashcan(float x, float y) : GFE::Entity() {
+        ConfigFile config(ResourcePath() + "trashcan.ini");
+        
+        std::string texture_file = config.read<std::string>("filename", "spritesheet.png");
+        
+        spritesheet = GFE::TextureManager::GetTexture(texture_file);
+        sprite = sf::Sprite(spritesheet);
+        
+        int scale = config.read<int>("scale", 4);
+        sprite.SetScale(scale, scale);
+        
+        upright_frame = sf::IntRect(0, 8, 8, 8); 
+        tipped_frame = sf::IntRect(8, 8, 16, 8); 
+        
+        Reset();
+        
+        SetPosition(x, y);
+    }
+
     Trashcan::~Trashcan() {
         
     }

@@ -30,15 +30,19 @@ namespace Keeper {
         spritesheet = sf::Texture();
         spritesheet.LoadFromFile(ResourcePath() + texture_file);
         sprite = sf::Sprite(spritesheet);
-        
         int scale = config.read<int>("scale", 4);
         sprite.SetScale(scale, scale);
+        
+        sprite.SetOrigin(0.5 * config.read<int>("width", 8), 
+                         1.0f * config.read<int>("height", 8));
+
+        
         BuildAnimations(config);
         
         SetAnimation("walk");
 
-        SetPosition(50, 50);
-        SetTarget(sf::Vector2f(200, 100));
+        SetPosition(64, 208);
+        SetTarget(sf::Vector2f(64, 208));
     }
     
     Player::~Player() {
@@ -128,7 +132,7 @@ namespace Keeper {
         sf::Vector2f movement(0, 0); 
         
         // Move to target
-        if (GFE::VectorMath::Distance(GetPosition(), target) > 10) {
+        if (GFE::VectorMath::Distance(GetPosition(), target) > 3) {
             // Get vector pointing at target
             movement = target - GetPosition();
 
@@ -139,7 +143,7 @@ namespace Keeper {
             movement = movement * speed * dt;
 
             // Apply movement vector
-            SetPosition(GetPosition() + movement);
+            Move(movement);
             
             SetAnimation("walk");
             

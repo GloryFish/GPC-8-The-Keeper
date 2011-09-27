@@ -14,7 +14,7 @@
 #include "GFE/Entity.hpp"
 
 namespace Keeper {
-    class Player : public GFE::Entity {
+    class Player : public sf::Drawable {
         sf::Texture spritesheet;
         sf::Sprite sprite;
         std::map<std::string, std::vector<sf::IntRect> > animations;

@@ -14,7 +14,7 @@
 #include "GFE/Entity.hpp"
 
 namespace Keeper {
-    class Trashcan : public GFE::Entity {
+    class Trashcan : public sf::Drawable {
         sf::Texture spritesheet;
         sf::Sprite sprite;
         sf::IntRect upright_frame;

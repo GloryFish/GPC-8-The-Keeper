@@ -19,7 +19,7 @@
 
 namespace Keeper {
     
-    Player::Player(void) : GFE::Entity() {
+    Player::Player(void) : sf::Drawable() {
         // player.ini file contains information about the player's sprites
         ConfigFile config(ResourcePath() + "player.ini");
         
@@ -39,7 +39,7 @@ namespace Keeper {
         
         BuildAnimations(config);
         
-        SetAnimation("walk");
+        SetAnimation("stand");
 
         SetPosition(64, 208);
         SetTarget(sf::Vector2f(64, 208));

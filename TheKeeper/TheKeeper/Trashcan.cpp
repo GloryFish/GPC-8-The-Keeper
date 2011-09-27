@@ -12,7 +12,7 @@
 #include "GFE/TextureManager.hpp"
 
 namespace Keeper {
-    Trashcan::Trashcan(void) : GFE::Entity() {
+    Trashcan::Trashcan(void) : sf::Drawable() {
         ConfigFile config(ResourcePath() + "trashcan.ini");
 
         std::string texture_file = config.read<std::string>("filename", "spritesheet.png");
@@ -29,7 +29,7 @@ namespace Keeper {
         Reset();
     }
 
-    Trashcan::Trashcan(float x, float y) : GFE::Entity() {
+    Trashcan::Trashcan(float x, float y) : sf::Drawable() {
         ConfigFile config(ResourcePath() + "trashcan.ini");
         
         std::string texture_file = config.read<std::string>("filename", "spritesheet.png");

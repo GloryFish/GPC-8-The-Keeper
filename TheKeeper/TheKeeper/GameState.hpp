@@ -27,8 +27,8 @@ namespace Keeper {
         GFE::Camera camera;
         sf::View view;
         sf::Music music;
-        std::vector<GFE::Entity*> objects;
-        std::vector<Trashcan*> cans;
+        std::vector<sf::Drawable*> objects;
+        std::vector<sf::Drawable*> cans;
         bool mouse_down;
         
     public:

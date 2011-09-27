@@ -22,7 +22,7 @@ namespace GFE {
         virtual void Render(sf::RenderTarget& target, sf::Renderer& renderer) const;
     };
     
-    bool SortEntities(const Entity* a, const Entity* b);
+    bool SortEntities(const sf::Drawable* a, const sf::Drawable* b);
 }
 
 #endif

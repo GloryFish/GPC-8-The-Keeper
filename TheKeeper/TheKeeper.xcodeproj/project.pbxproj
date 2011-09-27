@@ -29,6 +29,7 @@
 		C9AE7CA81425ABA80000A9AC /* trashcan.ini in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7CA71425ABA80000A9AC /* trashcan.ini */; };
 		C9AE7CAE1426925A0000A9AC /* Pedestrian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7CAD1426925A0000A9AC /* Pedestrian.cpp */; };
 		C9AE7CB1142692A20000A9AC /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7CAF142692A00000A9AC /* Entity.cpp */; };
+		C9AE7CB3142697260000A9AC /* pedestrian.ini in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7CB2142697260000A9AC /* pedestrian.ini */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		C9AE7CAD1426925A0000A9AC /* Pedestrian.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pedestrian.cpp; sourceTree = "<group>"; };
 		C9AE7CAF142692A00000A9AC /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
 		C9AE7CB0142692A10000A9AC /* Entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
+		C9AE7CB2142697260000A9AC /* pedestrian.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pedestrian.ini; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				C9AE7C8A142423500000A9AC /* config.ini */,
 				C9AE7C9514244E1E0000A9AC /* player.ini */,
 				C9AE7CA71425ABA80000A9AC /* trashcan.ini */,
+				C9AE7CB2142697260000A9AC /* pedestrian.ini */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				C9AE7C99142562960000A9AC /* scene.png in Resources */,
 				C9AE7CA01425A3840000A9AC /* fruit_fly.ogg in Resources */,
 				C9AE7CA81425ABA80000A9AC /* trashcan.ini in Resources */,
+				C9AE7CB3142697260000A9AC /* pedestrian.ini in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

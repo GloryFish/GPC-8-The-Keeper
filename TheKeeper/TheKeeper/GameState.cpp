@@ -51,7 +51,7 @@ namespace Keeper {
     
     GameState::~GameState(void) {
         // delete Trashcans
-        for (std::vector<Trashcan*>::iterator iter = cans.begin(); iter < cans.end(); ++iter) {
+        for (std::vector<sf::Drawable*>::iterator iter = cans.begin(); iter < cans.end(); ++iter) {
             delete *iter;
         }
     }
@@ -116,7 +116,7 @@ namespace Keeper {
 
         std::sort(objects.begin(), objects.end(), GFE::SortEntities);
         
-        for (std::vector<GFE::Entity*>::iterator iter = objects.begin(); iter < objects.end(); ++iter) {
+        for (std::vector<sf::Drawable*>::iterator iter = objects.begin(); iter < objects.end(); ++iter) {
             game->window.Draw(**iter);
         }
         

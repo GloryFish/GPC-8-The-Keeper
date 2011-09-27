@@ -24,7 +24,7 @@ namespace GFE {
         return;
     }
     
-    bool SortEntities(const Entity* a, const Entity* b) {
+    bool SortEntities(const sf::Drawable* a, const sf::Drawable* b) {
         return a->GetPosition().y < b->GetPosition().y;
     }
 

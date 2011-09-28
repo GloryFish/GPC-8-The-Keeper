@@ -12,19 +12,25 @@
 #include <SFML/Graphics.hpp>
 #include "ConfigFile.hpp"
 #include "GFE/Entity.hpp"
+#include "GFE/AnimationStore.hpp"
 
 namespace Keeper {
     class Player : public sf::Drawable {
         sf::Texture spritesheet;
         sf::Sprite sprite;
-        std::map<std::string, std::vector<sf::IntRect> > animations;
+        
+        GFE::AnimationStore animations;
+
+//        std::map<std::string, std::vector<sf::IntRect> > animations;
+        std::vector<GFE::Frame> current_animation;
         std::string current_animation_name;
         int current_animation_frame;
         float current_animation_duration;
-        float animation_delay;
+
         sf::Vector2f target;
         float speed;
         bool flipped;
+
     public:
         
         Player(void);
@@ -33,7 +39,7 @@ namespace Keeper {
         void SetTarget(sf::Vector2f theTarget);
         void Update(float dt);
     private:
-        void BuildAnimations(ConfigFile config);
+//        void BuildAnimations(ConfigFile config);
         virtual void Render(sf::RenderTarget& target, sf::Renderer& renderer) const;
     };
 }

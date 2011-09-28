@@ -30,6 +30,8 @@
 		C9AE7CAE1426925A0000A9AC /* Pedestrian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7CAD1426925A0000A9AC /* Pedestrian.cpp */; };
 		C9AE7CB1142692A20000A9AC /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7CAF142692A00000A9AC /* Entity.cpp */; };
 		C9AE7CB3142697260000A9AC /* pedestrian.ini in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7CB2142697260000A9AC /* pedestrian.ini */; };
+		C9B2BD5D143298310003598A /* AnimationStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9B2BD5C143298310003598A /* AnimationStore.cpp */; };
+		C9B2BD6014329F8C0003598A /* player.ani in Resources */ = {isa = PBXBuildFile; fileRef = C9B2BD5F14329F8C0003598A /* player.ani */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,9 @@
 		C9AE7CAF142692A00000A9AC /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
 		C9AE7CB0142692A10000A9AC /* Entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
 		C9AE7CB2142697260000A9AC /* pedestrian.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pedestrian.ini; sourceTree = "<group>"; };
+		C9B2BD5C143298310003598A /* AnimationStore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimationStore.cpp; sourceTree = "<group>"; };
+		C9B2BD5E14329B100003598A /* AnimationStore.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AnimationStore.hpp; sourceTree = "<group>"; };
+		C9B2BD5F14329F8C0003598A /* player.ani */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = player.ani; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +140,7 @@
 		C9AE7C591423CA010000A9AC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C9B2BD5F14329F8C0003598A /* player.ani */,
 				C9AE7C9F1425A3840000A9AC /* fruit_fly.ogg */,
 				C9AE7C98142562960000A9AC /* scene.png */,
 				C9AE7C9014242A810000A9AC /* spritesheet.png */,
@@ -158,6 +164,8 @@
 		C9AE7C6A1423CA3B0000A9AC /* GFE */ = {
 			isa = PBXGroup;
 			children = (
+				C9B2BD5E14329B100003598A /* AnimationStore.hpp */,
+				C9B2BD5C143298310003598A /* AnimationStore.cpp */,
 				C9AE7CAF142692A00000A9AC /* Entity.cpp */,
 				C9AE7CB0142692A10000A9AC /* Entity.hpp */,
 				C9AE7C6C1423CA3B0000A9AC /* Core.hpp */,
@@ -268,6 +276,7 @@
 				C9AE7CA01425A3840000A9AC /* fruit_fly.ogg in Resources */,
 				C9AE7CA81425ABA80000A9AC /* trashcan.ini in Resources */,
 				C9AE7CB3142697260000A9AC /* pedestrian.ini in Resources */,
+				C9B2BD6014329F8C0003598A /* player.ani in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +317,7 @@
 				C9AE7CA61425A5CA0000A9AC /* TextureManager.cpp in Sources */,
 				C9AE7CAE1426925A0000A9AC /* Pedestrian.cpp in Sources */,
 				C9AE7CB1142692A20000A9AC /* Entity.cpp in Sources */,
+				C9B2BD5D143298310003598A /* AnimationStore.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +470,7 @@
 				C9AE7C691423CA010000A9AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

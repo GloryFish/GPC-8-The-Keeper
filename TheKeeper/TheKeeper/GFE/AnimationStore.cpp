@@ -23,7 +23,12 @@ namespace GFE {
         
         std::string filename = ResourcePath() + groupName + ".ani";
         
-        read_json(filename, pt);
+        try {
+            read_json(filename, pt);
+        } catch (std::exception &e) {
+            Logger::Log() << "[AnimationStore] Error loading <" << groupName << "> " << e.what();
+            Logger::Flush();
+        }
 
         BOOST_FOREACH(boost::property_tree::ptree::value_type &a, pt.get_child("animations")) {
             std::string animationName = a.first;

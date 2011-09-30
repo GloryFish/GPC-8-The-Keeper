@@ -61,10 +61,14 @@ namespace Keeper {
     
     void Player::SetTarget(sf::Vector2f theTarget) {
         GFE::Logger::Log() << "New target: " << theTarget.x << ", " << theTarget.y;
-        GFE::Logger::Log() << "Distance: " << GFE::VectorMath::Distance(GetPosition(), theTarget);
+
+        if (GFE::VectorMath::Distance(target, theTarget) < 16) {
+            return;
+        }
         
         target = theTarget;
         
+        // Don't let the player move up too high
         if (target.y < 185) {
             target.y = 185;
         }
@@ -87,7 +91,7 @@ namespace Keeper {
         sf::Vector2f movement(0, 0); 
         
         // Move to target
-        if (GFE::VectorMath::Distance(GetPosition(), target) > 3) {
+        if (GFE::VectorMath::Distance(GetPosition(), target) > 16) {
             // Get vector pointing at target
             movement = target - GetPosition();
 
@@ -95,6 +99,8 @@ namespace Keeper {
             movement = GFE::VectorMath::Normalize(movement);
             
             // Multiply by speed
+            
+            // speed scaled by target distance
             movement = movement * speed * dt;
 
             // Apply movement vector

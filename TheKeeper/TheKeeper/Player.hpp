@@ -21,7 +21,6 @@ namespace Keeper {
         
         GFE::AnimationStore animations;
 
-//        std::map<std::string, std::vector<sf::IntRect> > animations;
         std::vector<GFE::Frame> current_animation;
         std::string current_animation_name;
         int current_animation_frame;
@@ -39,7 +38,6 @@ namespace Keeper {
         void SetTarget(sf::Vector2f theTarget);
         void Update(float dt);
     private:
-//        void BuildAnimations(ConfigFile config);
         virtual void Render(sf::RenderTarget& target, sf::Renderer& renderer) const;
     };
 }

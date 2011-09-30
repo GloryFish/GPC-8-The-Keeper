@@ -32,7 +32,7 @@ namespace Keeper {
         std::vector<sf::Drawable*> cans;
         bool mouse_down;
         NameGenerator nameGenerator;
-        
+        Gender gender;
     public:
         GameState(GFE::Game* theGame);
         

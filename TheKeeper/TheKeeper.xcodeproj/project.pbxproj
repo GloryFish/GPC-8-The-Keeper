@@ -36,6 +36,8 @@
 		C9CD64E31435685F00450406 /* last-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9CD64E01435685F00450406 /* last-names.txt */; };
 		C9CD64E41435685F00450406 /* male-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9CD64E11435685F00450406 /* male-names.txt */; };
 		C9CD64E81435693600450406 /* NameGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9CD64E71435693600450406 /* NameGenerator.cpp */; };
+		C9CD64EF1435781000450406 /* female-names-unique.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9CD64ED1435781000450406 /* female-names-unique.txt */; };
+		C9CD64F01435781000450406 /* male-names-unique.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9CD64EE1435781000450406 /* male-names-unique.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,8 +89,10 @@
 		C9CD64DF1435685F00450406 /* female-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "female-names.txt"; sourceTree = "<group>"; };
 		C9CD64E01435685F00450406 /* last-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "last-names.txt"; sourceTree = "<group>"; };
 		C9CD64E11435685F00450406 /* male-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "male-names.txt"; sourceTree = "<group>"; };
-		C9CD64E61435690100450406 /* NameGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; path = NameGenerator.hpp; sourceTree = "<group>"; };
+		C9CD64E61435690100450406 /* NameGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NameGenerator.hpp; sourceTree = "<group>"; };
 		C9CD64E71435693600450406 /* NameGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NameGenerator.cpp; sourceTree = "<group>"; };
+		C9CD64ED1435781000450406 /* female-names-unique.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "female-names-unique.txt"; sourceTree = "<group>"; };
+		C9CD64EE1435781000450406 /* male-names-unique.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "male-names-unique.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 		C9AE7C591423CA010000A9AC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C9CD64ED1435781000450406 /* female-names-unique.txt */,
+				C9CD64EE1435781000450406 /* male-names-unique.txt */,
 				C9CD64DF1435685F00450406 /* female-names.txt */,
 				C9CD64E01435685F00450406 /* last-names.txt */,
 				C9CD64E11435685F00450406 /* male-names.txt */,
@@ -294,6 +300,8 @@
 				C9CD64E21435685F00450406 /* female-names.txt in Resources */,
 				C9CD64E31435685F00450406 /* last-names.txt in Resources */,
 				C9CD64E41435685F00450406 /* male-names.txt in Resources */,
+				C9CD64EF1435781000450406 /* female-names-unique.txt in Resources */,
+				C9CD64F01435781000450406 /* male-names-unique.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

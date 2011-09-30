@@ -16,8 +16,8 @@
 namespace Keeper {
     
     NameGenerator::NameGenerator(void) {
-        GetLines(ResourcePath() + "male-names.txt", maleFirstnames);
-        GetLines(ResourcePath() + "female-names.txt", femaleFirstnames);
+        GetLines(ResourcePath() + "male-names-unique.txt", maleFirstnames);
+        GetLines(ResourcePath() + "female-names-unique.txt", femaleFirstnames);
         GetLines(ResourcePath() + "last-names.txt", lastnames);
     }
     
@@ -27,21 +27,31 @@ namespace Keeper {
 
     std::string NameGenerator::GetRandomName(Gender gender) {
         if (gender == GenderBoth) {
-            
+            int num = rand() % 2;
+            if (num == 0) {
+                gender = GenderMale;
+            } else {
+                gender = GenderFemale;
+            }
         }
-        
         
         std::string name;
 
         // Firstname
-        int index = rand() % maleFirstnames.size();
-        name = maleFirstnames[index];
-        
+        if (gender == GenderMale) {
+            int index = rand() % maleFirstnames.size();
+            name = maleFirstnames[index];
+        } else {
+            int index = rand() % femaleFirstnames.size();
+            name = femaleFirstnames[index];
+        }
+
         name += " ";
         
         // Get lastname
-        index = rand() % lastnames.size();
+        int index = rand() % lastnames.size();
         name += lastnames[index];
+        
         
         return name;
     }

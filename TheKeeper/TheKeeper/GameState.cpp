@@ -17,6 +17,7 @@ namespace Keeper {
     
     GameState::GameState(GFE::Game* theGame) : IState("Game", theGame) {
         mouse_down = false;
+        gender = GenderBoth;
         
         background_image.LoadFromFile(ResourcePath() + "scene.png");
         background = sf::Sprite(background_image);
@@ -63,8 +64,17 @@ namespace Keeper {
                 if (event.Key.Code == sf::Keyboard::Escape) {
                     game->Quit();
                 }
+                if (event.Key.Code == sf::Keyboard::M) {
+                    gender = GenderMale;
+                }
+                if (event.Key.Code == sf::Keyboard::F) {
+                    gender = GenderFemale;
+                }
+                if (event.Key.Code == sf::Keyboard::B) {
+                    gender = GenderBoth;
+                }
                 if (event.Key.Code == sf::Keyboard::N) {
-                    GFE::Logger::Log() << nameGenerator.GetRandomName(Keeper::GenderBoth);
+                    GFE::Logger::Log() << nameGenerator.GetRandomName(gender);
                 }
                 break;
             case (sf::Event::MouseButtonPressed):

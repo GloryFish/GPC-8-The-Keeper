@@ -16,6 +16,7 @@
 #include "GFE/Camera.hpp"
 #include <SFML/Audio.hpp>
 #include "GFE/Entity.hpp"
+#include "NameGenerator.hpp"
 
 namespace Keeper {
     
@@ -30,6 +31,7 @@ namespace Keeper {
         std::vector<sf::Drawable*> objects;
         std::vector<sf::Drawable*> cans;
         bool mouse_down;
+        NameGenerator nameGenerator;
         
     public:
         GameState(GFE::Game* theGame);

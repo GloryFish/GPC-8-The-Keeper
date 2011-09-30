@@ -11,6 +11,7 @@
 #include "assert.h"
 #include "ResourcePath.hpp"
 #include <SFML/Audio.hpp>
+#include "NameGenerator.hpp"
 
 namespace Keeper {
     
@@ -61,6 +62,9 @@ namespace Keeper {
             case (sf::Event::KeyPressed):
                 if (event.Key.Code == sf::Keyboard::Escape) {
                     game->Quit();
+                }
+                if (event.Key.Code == sf::Keyboard::N) {
+                    GFE::Logger::Log() << nameGenerator.GetRandomName(Keeper::GenderBoth);
                 }
                 break;
             case (sf::Event::MouseButtonPressed):

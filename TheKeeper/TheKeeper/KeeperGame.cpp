@@ -14,7 +14,7 @@
 namespace Keeper {
     
     KeeperGame::KeeperGame(const std::string theTitle) : GFE::Game(theTitle) {
-        
+        srand(time(0));
     }
     
     KeeperGame::~KeeperGame(void) {

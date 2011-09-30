@@ -32,6 +32,10 @@
 		C9AE7CB3142697260000A9AC /* pedestrian.ini in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7CB2142697260000A9AC /* pedestrian.ini */; };
 		C9B2BD5D143298310003598A /* AnimationStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9B2BD5C143298310003598A /* AnimationStore.cpp */; };
 		C9B2BD6014329F8C0003598A /* player.ani in Resources */ = {isa = PBXBuildFile; fileRef = C9B2BD5F14329F8C0003598A /* player.ani */; };
+		C9CD64E21435685F00450406 /* female-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9CD64DF1435685F00450406 /* female-names.txt */; };
+		C9CD64E31435685F00450406 /* last-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9CD64E01435685F00450406 /* last-names.txt */; };
+		C9CD64E41435685F00450406 /* male-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9CD64E11435685F00450406 /* male-names.txt */; };
+		C9CD64E81435693600450406 /* NameGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9CD64E71435693600450406 /* NameGenerator.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +84,11 @@
 		C9B2BD5C143298310003598A /* AnimationStore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimationStore.cpp; sourceTree = "<group>"; };
 		C9B2BD5E14329B100003598A /* AnimationStore.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AnimationStore.hpp; sourceTree = "<group>"; };
 		C9B2BD5F14329F8C0003598A /* player.ani */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = player.ani; sourceTree = "<group>"; };
+		C9CD64DF1435685F00450406 /* female-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "female-names.txt"; sourceTree = "<group>"; };
+		C9CD64E01435685F00450406 /* last-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "last-names.txt"; sourceTree = "<group>"; };
+		C9CD64E11435685F00450406 /* male-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "male-names.txt"; sourceTree = "<group>"; };
+		C9CD64E61435690100450406 /* NameGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; path = NameGenerator.hpp; sourceTree = "<group>"; };
+		C9CD64E71435693600450406 /* NameGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NameGenerator.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +142,8 @@
 				C9AE7C601423CA010000A9AC /* Supporting Files */,
 				C9AE7C831423DEB70000A9AC /* KeeperGame.cpp */,
 				C9AE7C851423DEC20000A9AC /* KeeperGame.hpp */,
+				C9CD64E61435690100450406 /* NameGenerator.hpp */,
+				C9CD64E71435693600450406 /* NameGenerator.cpp */,
 			);
 			path = TheKeeper;
 			sourceTree = "<group>";
@@ -140,6 +151,9 @@
 		C9AE7C591423CA010000A9AC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C9CD64DF1435685F00450406 /* female-names.txt */,
+				C9CD64E01435685F00450406 /* last-names.txt */,
+				C9CD64E11435685F00450406 /* male-names.txt */,
 				C9B2BD5F14329F8C0003598A /* player.ani */,
 				C9AE7C9F1425A3840000A9AC /* fruit_fly.ogg */,
 				C9AE7C98142562960000A9AC /* scene.png */,
@@ -277,6 +291,9 @@
 				C9AE7CA81425ABA80000A9AC /* trashcan.ini in Resources */,
 				C9AE7CB3142697260000A9AC /* pedestrian.ini in Resources */,
 				C9B2BD6014329F8C0003598A /* player.ani in Resources */,
+				C9CD64E21435685F00450406 /* female-names.txt in Resources */,
+				C9CD64E31435685F00450406 /* last-names.txt in Resources */,
+				C9CD64E41435685F00450406 /* male-names.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +335,7 @@
 				C9AE7CAE1426925A0000A9AC /* Pedestrian.cpp in Sources */,
 				C9AE7CB1142692A20000A9AC /* Entity.cpp in Sources */,
 				C9B2BD5D143298310003598A /* AnimationStore.cpp in Sources */,
+				C9CD64E81435693600450406 /* NameGenerator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

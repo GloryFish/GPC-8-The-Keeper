@@ -27,29 +27,24 @@ namespace Keeper {
 
     std::string NameGenerator::GetRandomName(Gender gender) {
         if (gender == GenderBoth) {
-            int num = rand() % 2;
-            if (num == 0) {
-                gender = GenderMale;
-            } else {
-                gender = GenderFemale;
-            }
+            gender = static_cast<Gender>(rand() % 2);
         }
         
         std::string name;
 
         // Firstname
         if (gender == GenderMale) {
-            int index = rand() % maleFirstnames.size();
+            int index = static_cast<int>(rand() % maleFirstnames.size());
             name = maleFirstnames[index];
         } else {
-            int index = rand() % femaleFirstnames.size();
+            int index = static_cast<int>(rand() % femaleFirstnames.size());
             name = femaleFirstnames[index];
         }
 
         name += " ";
         
         // Get lastname
-        int index = rand() % lastnames.size();
+        int index = static_cast<int>(rand() % lastnames.size());
         name += lastnames[index];
         
         

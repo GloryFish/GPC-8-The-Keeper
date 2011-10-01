@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C95459891437889500F6B4A8 /* Mob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C95459881437889500F6B4A8 /* Mob.cpp */; };
 		C9AE7C521423CA000000A9AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AE7C511423CA000000A9AC /* Foundation.framework */; };
 		C9AE7C551423CA000000A9AC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7C541423CA000000A9AC /* main.cpp */; };
 		C9AE7C571423CA010000A9AC /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7C561423CA010000A9AC /* ResourcePath.mm */; };
@@ -41,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C95459871437882A00F6B4A8 /* Mob.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Mob.hpp; sourceTree = "<group>"; };
+		C95459881437889500F6B4A8 /* Mob.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mob.cpp; sourceTree = "<group>"; };
 		C9AE7C4D1423CA000000A9AC /* TheKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AE7C511423CA000000A9AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9AE7C541423CA000000A9AC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -142,12 +145,14 @@
 				C9AE7C541423CA000000A9AC /* main.cpp */,
 				C9AE7C561423CA010000A9AC /* ResourcePath.mm */,
 				C9AE7C581423CA010000A9AC /* ResourcePath.hpp */,
-				C9AE7C591423CA010000A9AC /* Resources */,
-				C9AE7C601423CA010000A9AC /* Supporting Files */,
 				C9AE7C831423DEB70000A9AC /* KeeperGame.cpp */,
 				C9AE7C851423DEC20000A9AC /* KeeperGame.hpp */,
 				C9CD64E61435690100450406 /* NameGenerator.hpp */,
 				C9CD64E71435693600450406 /* NameGenerator.cpp */,
+				C9AE7C591423CA010000A9AC /* Resources */,
+				C9AE7C601423CA010000A9AC /* Supporting Files */,
+				C95459871437882A00F6B4A8 /* Mob.hpp */,
+				C95459881437889500F6B4A8 /* Mob.cpp */,
 			);
 			path = TheKeeper;
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 				C9AE7CB1142692A20000A9AC /* Entity.cpp in Sources */,
 				C9B2BD5D143298310003598A /* AnimationStore.cpp in Sources */,
 				C9CD64E81435693600450406 /* NameGenerator.cpp in Sources */,
+				C95459891437889500F6B4A8 /* Mob.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

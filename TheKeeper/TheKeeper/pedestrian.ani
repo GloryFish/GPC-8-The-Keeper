@@ -1,0 +1,65 @@
+{
+  "animations": {
+    "dance": [
+      {
+        "duration": 0.7,
+        "rect": {
+          "y": 8,
+          "x": 64,
+          "width": 8,
+          "height": 8
+        }
+      },
+      {
+        "duration": 0.7,
+        "rect": {
+          "y": 8,
+          "x": 56,
+          "width": 8,
+          "height": 8
+        }
+      }
+    ],
+    "stand": [
+      {
+        "duration": 4,
+        "rect": {
+          "y": 0,
+          "x": 0,
+          "width": 8,
+          "height": 8
+        }
+      },
+      {
+        "duration": 0.2,
+        "rect": {
+          "y": 0,
+          "x": 8,
+          "width": 8,
+          "height": 8
+        }
+      }
+    ],
+    "walk": [
+      {
+        "duration": 0.3,
+        "rect": {
+          "y": 0,
+          "x": 0,
+          "width": 8,
+          "height": 8
+        }
+      },
+      {
+        "duration": 0.3,
+        "rect": {
+          "y": 0,
+          "x": 8,
+          "width": 8,
+          "height": 8
+        }
+      }
+    ]
+  },
+  "spritesheet": "spritesheet.png"
+}

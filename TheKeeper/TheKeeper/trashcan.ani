@@ -1,0 +1,27 @@
+{
+  "animations": {
+    "upright": [
+      {
+        "duration": 1,
+        "rect": {
+          "y": 8,
+          "x": 0,
+          "width": 8,
+          "height": 8
+        }
+      }
+    ],
+    "tipped": [
+      {
+        "duration": 1,
+        "rect": {
+          "y": 8,
+          "x": 8,
+          "width": 8,
+          "height": 8
+        }
+      }
+    ]
+  },
+  "spritesheet": "spritesheet.png"
+}

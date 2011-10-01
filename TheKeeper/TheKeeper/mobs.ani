@@ -1,0 +1,85 @@
+{
+  "animations": {
+    "mob_pedestrian_0_walk": [
+      {
+        "duration": 0.4,
+        "rect": {
+          "y": 0,
+          "x": 24,
+          "width": 8,
+          "height": 8
+        }
+      },
+      {
+        "duration": 0.4,
+        "rect": {
+          "y": 0,
+          "x": 32,
+          "width": 8,
+          "height": 8
+        }
+      }
+    ],
+    "mob_pedestrian_1_walk": [
+      {
+        "duration": 0.4,
+        "rect": {
+          "y": 0,
+          "x": 72,
+          "width": 8,
+          "height": 8
+        }
+      },
+      {
+        "duration": 0.4,
+        "rect": {
+          "y": 0,
+          "x": 80,
+          "width": 8,
+          "height": 8
+        }
+      }
+    ],
+    "mob_pedestrian_0_stand": [
+      {
+        "duration": 4,
+        "rect": {
+          "y": 0,
+          "x": 24,
+          "width": 8,
+          "height": 8
+        }
+      },
+      {
+        "duration": 0.2,
+        "rect": {
+          "y": 0,
+          "x": 40,
+          "width": 8,
+          "height": 8
+        }
+      }
+    ],
+    "mob_pedestrian_1_stand": [
+      {
+        "duration": 4,
+        "rect": {
+          "y": 0,
+          "x": 80,
+          "width": 8,
+          "height": 8
+        }
+      },
+      {
+        "duration": 0.2,
+        "rect": {
+          "y": 0,
+          "x": 88,
+          "width": 8,
+          "height": 8
+        }
+      }
+    ]
+  },
+  "spritesheet": "spritesheet.png"
+}

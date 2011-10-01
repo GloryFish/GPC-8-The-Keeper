@@ -10,19 +10,37 @@
 #define TheKeeper_Mob_hpp
 
 #include "GFE/Entity.hpp"
+#include "IAIComponent.hpp"
+#include <SFML/Graphics.hpp>
+#include "GFE/AnimationStore.hpp"
 
 namespace Keeper {
     
-    class Mob : GFE::Entity {
+    class Mob : public GFE::Entity {
+
+        sf::Texture spritesheet;
+        sf::Sprite sprite;
+
+        GFE::AnimationStore animations;
+
+        
+        GFE::IAIComponent* aiComponent;
+
     public:
+        Mob();
+        ~Mob();
+        
+        void SetAIComponent(GFE::IAIComponent* theAIComponent);
         
         
+        void Update(float dt);
         
     private:
+
+        virtual void Render(sf::RenderTarget& target, sf::Renderer& renderer) const;
+
         
-        
-        
-    }
+    };
     
     
 }

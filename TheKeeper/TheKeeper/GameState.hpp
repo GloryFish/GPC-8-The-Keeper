@@ -17,6 +17,7 @@
 #include <SFML/Audio.hpp>
 #include "GFE/Entity.hpp"
 #include "NameGenerator.hpp"
+#include "Mob.hpp"
 
 namespace Keeper {
     
@@ -33,6 +34,9 @@ namespace Keeper {
         bool mouse_down;
         NameGenerator nameGenerator;
         Gender gender;
+        
+        Mob mob;
+        
     public:
         GameState(GFE::Game* theGame);
         

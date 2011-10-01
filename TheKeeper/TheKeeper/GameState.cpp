@@ -12,6 +12,8 @@
 #include "ResourcePath.hpp"
 #include <SFML/Audio.hpp>
 #include "NameGenerator.hpp"
+#include "Mob.hpp"
+#include "MobFactory.hpp"
 
 namespace Keeper {
     
@@ -48,7 +50,11 @@ namespace Keeper {
             cans.push_back(can);
             objects.push_back(can);
         }
-
+        
+        
+        // Create mobs
+        
+        mob = MobFactory::NewMob(Keeper::MobTypePedestrian);
     }
     
     GameState::~GameState(void) {
@@ -113,6 +119,8 @@ namespace Keeper {
         
         player.Update(dt);
         
+        mob.Update(dt);
+        
         sf::IntRect bounds(sf::Vector2i(0, 0), sf::Vector2i(background.GetSize().x, background.GetSize().y));
         
         camera.SetBounds(bounds);
@@ -134,7 +142,7 @@ namespace Keeper {
             game->window.Draw(**iter);
         }
         
-        
+        game->window.Draw(mob);
     }
     
     void GameState::Cleanup(void) {

@@ -15,7 +15,7 @@
 #include "GFE/AnimationStore.hpp"
 
 namespace Keeper {
-    class Player : public sf::Drawable {
+    class Player : public GFE::Entity {
         sf::Texture spritesheet;
         sf::Sprite sprite;
         

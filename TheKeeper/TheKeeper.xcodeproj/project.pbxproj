@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C95459891437889500F6B4A8 /* Mob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C95459881437889500F6B4A8 /* Mob.cpp */; };
-		C954598C1437977C00F6B4A8 /* MobFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C954598B1437977C00F6B4A8 /* MobFactory.cpp */; };
-		C954599114379AA300F6B4A8 /* PedestrianAIComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C954599014379AA300F6B4A8 /* PedestrianAIComponent.cpp */; };
 		C95459931437B4BA00F6B4A8 /* mobs.ani in Resources */ = {isa = PBXBuildFile; fileRef = C95459921437B4BA00F6B4A8 /* mobs.ani */; };
 		C9AE7C521423CA000000A9AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AE7C511423CA000000A9AC /* Foundation.framework */; };
 		C9AE7C551423CA000000A9AC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7C541423CA000000A9AC /* main.cpp */; };
@@ -47,11 +45,7 @@
 /* Begin PBXFileReference section */
 		C95459871437882A00F6B4A8 /* Mob.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Mob.hpp; sourceTree = "<group>"; };
 		C95459881437889500F6B4A8 /* Mob.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mob.cpp; sourceTree = "<group>"; };
-		C954598A1437977400F6B4A8 /* MobFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MobFactory.hpp; sourceTree = "<group>"; };
-		C954598B1437977C00F6B4A8 /* MobFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MobFactory.cpp; sourceTree = "<group>"; };
 		C954598D143799DA00F6B4A8 /* IAIComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IAIComponent.hpp; sourceTree = "<group>"; };
-		C954598F14379A9700F6B4A8 /* PedestrianAIComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PedestrianAIComponent.hpp; sourceTree = "<group>"; };
-		C954599014379AA300F6B4A8 /* PedestrianAIComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PedestrianAIComponent.cpp; sourceTree = "<group>"; };
 		C95459921437B4BA00F6B4A8 /* mobs.ani */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mobs.ani; sourceTree = "<group>"; };
 		C9AE7C4D1423CA000000A9AC /* TheKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AE7C511423CA000000A9AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -122,8 +116,8 @@
 		C954598E14379A7C00F6B4A8 /* Mobs */ = {
 			isa = PBXGroup;
 			children = (
-				C954598F14379A9700F6B4A8 /* PedestrianAIComponent.hpp */,
-				C954599014379AA300F6B4A8 /* PedestrianAIComponent.cpp */,
+				C95459871437882A00F6B4A8 /* Mob.hpp */,
+				C95459881437889500F6B4A8 /* Mob.cpp */,
 			);
 			name = Mobs;
 			sourceTree = "<group>";
@@ -170,10 +164,6 @@
 				C9CD64E71435693600450406 /* NameGenerator.cpp */,
 				C9AE7C591423CA010000A9AC /* Resources */,
 				C9AE7C601423CA010000A9AC /* Supporting Files */,
-				C95459871437882A00F6B4A8 /* Mob.hpp */,
-				C95459881437889500F6B4A8 /* Mob.cpp */,
-				C954598A1437977400F6B4A8 /* MobFactory.hpp */,
-				C954598B1437977C00F6B4A8 /* MobFactory.cpp */,
 			);
 			path = TheKeeper;
 			sourceTree = "<group>";
@@ -374,8 +364,6 @@
 				C9B2BD5D143298310003598A /* AnimationStore.cpp in Sources */,
 				C9CD64E81435693600450406 /* NameGenerator.cpp in Sources */,
 				C95459891437889500F6B4A8 /* Mob.cpp in Sources */,
-				C954598C1437977C00F6B4A8 /* MobFactory.cpp in Sources */,
-				C954599114379AA300F6B4A8 /* PedestrianAIComponent.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

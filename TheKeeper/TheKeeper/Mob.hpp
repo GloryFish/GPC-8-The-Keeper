@@ -29,10 +29,6 @@ namespace Keeper {
     public:
         Mob();
         ~Mob();
-        
-        void SetAIComponent(GFE::IAIComponent* theAIComponent);
-        
-        
         void Update(float dt);
         
     private:

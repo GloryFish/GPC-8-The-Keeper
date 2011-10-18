@@ -13,7 +13,6 @@
 #include <SFML/Audio.hpp>
 #include "NameGenerator.hpp"
 #include "Mob.hpp"
-#include "MobFactory.hpp"
 
 namespace Keeper {
     
@@ -53,8 +52,6 @@ namespace Keeper {
         
         
         // Create mobs
-        
-        mob = MobFactory::NewMob(Keeper::MobTypePedestrian);
     }
     
     GameState::~GameState(void) {
@@ -142,7 +139,6 @@ namespace Keeper {
             game->window.Draw(**iter);
         }
         
-        game->window.Draw(mob);
     }
     
     void GameState::Cleanup(void) {

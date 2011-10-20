@@ -16,7 +16,7 @@
 
 namespace GFE {
     
-    Game::Game(const std::string theTitle) {
+    Game::Game(const std::string theTitle) : stat_display() {
         running = false;
         update_rate = (Uint32)(1000.0f / 100.0f);
         title = theTitle;
@@ -142,7 +142,7 @@ namespace GFE {
                 float dt = (float)update_clock.GetElapsedTime() / 1000;
                 
                 currentState->Update(dt);
-                
+                stat_display.Update(dt);
                 update_clock.Reset();
                 
                 GFE::Logger::Flush();
@@ -151,6 +151,8 @@ namespace GFE {
             // Draw current state
             currentState->Draw();
 
+            stat_display.Draw(window);
+            
             window.Display();
             
             // Cleanup state

@@ -61,8 +61,6 @@ namespace Keeper {
     }
     
     void Player::SetTarget(sf::Vector2f theTarget) {
-//        GFE::Logger::Log() << "New target: " << theTarget.x << ", " << theTarget.y;
-
         if (GFE::VectorMath::Distance(target, theTarget) < 32) {
             return;
         }

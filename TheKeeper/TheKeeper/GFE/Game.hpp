@@ -10,7 +10,7 @@
 #define SpaceRoguelike_Game_hpp
 
 #include "StateManager.hpp"
-#include "StateManager.hpp"
+#include "StatDisplay.hpp"
 #include "CoreTypes.hpp"
 
 #include <SFML/Graphics.hpp>
@@ -57,6 +57,7 @@ namespace GFE {
         // Fields
         bool running;
         Uint32 update_rate;
+        StatDisplay stat_display;
     };
     
 }

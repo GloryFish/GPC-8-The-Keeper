@@ -26,14 +26,22 @@ namespace Keeper {
         std::string current_animation_name;
         int current_animation_frame;
         float current_animation_duration;
+        std::string animation_prefix;
         
-        
+        sf::Vector2f target;
+        sf::Vector2f avoid;
+        float speed;
+        sf::IntRect bounds;
+        bool flipped;
         
     public:
         MobPedestrian(void);
         ~MobPedestrian();
         
         void SetAnimation(std::string animation);
+        void SetTarget(sf::Vector2f theTarget);
+        void SetAvoid(sf::Vector2f theAvoid);
+        void SetBounds(sf::IntRect theBounds);
 
         virtual void Update(float dt);
         

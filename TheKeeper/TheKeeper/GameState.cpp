@@ -28,6 +28,9 @@ namespace Keeper {
         camera.Reset(game->GetDisplayRect());
         game->SetView(camera.GetView());
         
+        sf::IntRect bounds(sf::Vector2i(0, 0), sf::Vector2i(background.GetSize().x, background.GetSize().y));
+        camera.SetBounds(bounds);
+        
         // Open it from an audio file
         music.OpenFromFile(ResourcePath() + "fruit_fly.ogg");
         
@@ -49,8 +52,9 @@ namespace Keeper {
         }
         
         // Create mobs
-        for (int x = 0; x <= 5;  x++) {
+        for (int x = 0; x <= 500;  x++) {
             MobPedestrian* mob = new MobPedestrian();
+            mob->SetBounds(bounds);
             mobs.push_back(mob);
             objects.push_back(mob);
         }
@@ -121,6 +125,16 @@ namespace Keeper {
         if (mouse_down) {
             player.SetTarget(game->GetMousePositionRelative());
         }
+
+        // Set Mob avoidance
+        for (std::vector<Mob*>::iterator iter = mobs.begin(); iter < mobs.end(); ++iter) {
+            
+            MobPedestrian* mob = dynamic_cast<MobPedestrian*>(*iter);
+            
+            if (mob != NULL) {
+                mob->SetAvoid(player.GetPosition());
+            }
+        }
         
         // Update objects
         for (std::vector<GFE::Entity*>::iterator iter = objects.begin(); iter < objects.end(); ++iter) {
@@ -128,9 +142,6 @@ namespace Keeper {
         }
         player.Update(dt);
         
-        sf::IntRect bounds(sf::Vector2i(0, 0), sf::Vector2i(background.GetSize().x, background.GetSize().y));
-        
-        camera.SetBounds(bounds);
         camera.SetFocus(player.GetPosition());
         camera.Update(dt);
         game->SetView(camera.GetView());
@@ -139,7 +150,7 @@ namespace Keeper {
     void GameState::Draw(void) {
         // Check our App pointer
         assert(NULL != game && "SplashState::Draw() bad app pointer, init must be called first");
-        
+
         game->window.Clear(sf::Color(64, 64, 64, 255));
         game->window.Draw(background);
 

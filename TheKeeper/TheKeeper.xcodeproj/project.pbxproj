@@ -35,6 +35,7 @@
 		C9B2BD6014329F8C0003598A /* player.ani in Resources */ = {isa = PBXBuildFile; fileRef = C9B2BD5F14329F8C0003598A /* player.ani */; };
 		C9C4D88C144F8C3700012691 /* MobPedestrian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9C4D88B144F8C3700012691 /* MobPedestrian.cpp */; };
 		C9C4D890144F8D0300012691 /* Mob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9C4D88F144F8D0300012691 /* Mob.cpp */; };
+		C9C4D89A144FBF4A00012691 /* StatDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9C4D899144FBF4A00012691 /* StatDisplay.cpp */; };
 		C9CD64E21435685F00450406 /* female-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9CD64DF1435685F00450406 /* female-names.txt */; };
 		C9CD64E31435685F00450406 /* last-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9CD64E01435685F00450406 /* last-names.txt */; };
 		C9CD64E41435685F00450406 /* male-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9CD64E11435685F00450406 /* male-names.txt */; };
@@ -95,6 +96,8 @@
 		C9C4D88D144F8C4100012691 /* MobPedestrian.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MobPedestrian.hpp; sourceTree = "<group>"; };
 		C9C4D88E144F8CEA00012691 /* Mob.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Mob.hpp; sourceTree = "<group>"; };
 		C9C4D88F144F8D0300012691 /* Mob.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mob.cpp; sourceTree = "<group>"; };
+		C9C4D899144FBF4A00012691 /* StatDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StatDisplay.cpp; sourceTree = "<group>"; };
+		C9C4D89B144FBF5700012691 /* StatDisplay.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StatDisplay.hpp; sourceTree = "<group>"; };
 		C9CD64DF1435685F00450406 /* female-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "female-names.txt"; sourceTree = "<group>"; };
 		C9CD64E01435685F00450406 /* last-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "last-names.txt"; sourceTree = "<group>"; };
 		C9CD64E11435685F00450406 /* male-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "male-names.txt"; sourceTree = "<group>"; };
@@ -207,12 +210,12 @@
 			children = (
 				C9B2BD5E14329B100003598A /* AnimationStore.hpp */,
 				C9B2BD5C143298310003598A /* AnimationStore.cpp */,
-				C9AE7CAF142692A00000A9AC /* Entity.cpp */,
 				C9AE7CB0142692A10000A9AC /* Entity.hpp */,
+				C9AE7CAF142692A00000A9AC /* Entity.cpp */,
 				C9AE7C6C1423CA3B0000A9AC /* Core.hpp */,
 				C9AE7C6D1423CA3B0000A9AC /* CoreTypes.hpp */,
-				C9AE7C6E1423CA3B0000A9AC /* Game.cpp */,
 				C9AE7C6F1423CA3B0000A9AC /* Game.hpp */,
+				C9AE7C6E1423CA3B0000A9AC /* Game.cpp */,
 				C9AE7C721423CA3B0000A9AC /* IState.hpp */,
 				C9AE7C731423CA3B0000A9AC /* Logger.cpp */,
 				C9AE7C741423CA3B0000A9AC /* Logger.hpp */,
@@ -224,6 +227,8 @@
 				C9AE7CA41425A5C20000A9AC /* TextureManager.hpp */,
 				C9AE7CA51425A5CA0000A9AC /* TextureManager.cpp */,
 				C954598D143799DA00F6B4A8 /* IAIComponent.hpp */,
+				C9C4D89B144FBF5700012691 /* StatDisplay.hpp */,
+				C9C4D899144FBF4A00012691 /* StatDisplay.cpp */,
 			);
 			path = GFE;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				C9CD64E81435693600450406 /* NameGenerator.cpp in Sources */,
 				C9C4D88C144F8C3700012691 /* MobPedestrian.cpp in Sources */,
 				C9C4D890144F8D0300012691 /* Mob.cpp in Sources */,
+				C9C4D89A144FBF4A00012691 /* StatDisplay.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

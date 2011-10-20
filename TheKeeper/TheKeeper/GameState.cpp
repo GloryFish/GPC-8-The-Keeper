@@ -12,7 +12,6 @@
 #include "ResourcePath.hpp"
 #include <SFML/Audio.hpp>
 #include "NameGenerator.hpp"
-#include "Mob.hpp"
 
 namespace Keeper {
     
@@ -42,7 +41,6 @@ namespace Keeper {
         // Add player to scene list
         objects.push_back(&player);
 
-        
         // Create trashcans
         for (int x = 100; x <= 1200; x += 200) {
             Trashcan* can = new Trashcan(x, 220);
@@ -50,13 +48,23 @@ namespace Keeper {
             objects.push_back(can);
         }
         
-        
         // Create mobs
+        for (int x = 0; x <= 5;  x++) {
+            MobPedestrian* mob = new MobPedestrian();
+            mobs.push_back(mob);
+            objects.push_back(mob);
+        }
+        
     }
     
     GameState::~GameState(void) {
         // delete Trashcans
         for (std::vector<GFE::Entity*>::iterator iter = cans.begin(); iter < cans.end(); ++iter) {
+            delete *iter;
+        }
+
+        // delete Mobs
+        for (std::vector<Mob*>::iterator iter = mobs.begin(); iter < mobs.end(); ++iter) {
             delete *iter;
         }
     }
@@ -114,9 +122,11 @@ namespace Keeper {
             player.SetTarget(game->GetMousePositionRelative());
         }
         
+        // Update objects
+        for (std::vector<GFE::Entity*>::iterator iter = objects.begin(); iter < objects.end(); ++iter) {
+            (*iter)->Update(dt);
+        }
         player.Update(dt);
-        
-        mob.Update(dt);
         
         sf::IntRect bounds(sf::Vector2i(0, 0), sf::Vector2i(background.GetSize().x, background.GetSize().y));
         

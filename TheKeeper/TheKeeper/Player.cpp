@@ -51,6 +51,7 @@ namespace Keeper {
         if (animation == current_animation_name) {
             return;
         }
+        GFE::Logger::Log() << "Changed animation: " << animation;
         
         current_animation = animations.GetAnimation(animation);
         current_animation_name = animation;
@@ -60,9 +61,9 @@ namespace Keeper {
     }
     
     void Player::SetTarget(sf::Vector2f theTarget) {
-        GFE::Logger::Log() << "New target: " << theTarget.x << ", " << theTarget.y;
+//        GFE::Logger::Log() << "New target: " << theTarget.x << ", " << theTarget.y;
 
-        if (GFE::VectorMath::Distance(target, theTarget) < 16) {
+        if (GFE::VectorMath::Distance(target, theTarget) < 32) {
             return;
         }
         
@@ -74,8 +75,8 @@ namespace Keeper {
         }
     }
     
-    void Player::Update(float dt) {
-        // Process animation
+    
+    void Player::Animate(float dt) {
         current_animation_duration += dt;
         
         if (current_animation_duration > current_animation[current_animation_frame].duration) {
@@ -87,6 +88,10 @@ namespace Keeper {
         }
         
         sprite.SetSubRect(current_animation[current_animation_frame].rect);
+    }
+    
+    void Player::Update(float dt) {
+        Animate(dt);
         
         sf::Vector2f movement(0, 0); 
         

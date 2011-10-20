@@ -20,10 +20,13 @@ namespace GFE {
     }
 
     void Entity::Render(sf::RenderTarget& target, sf::Renderer& renderer) const {
-        GFE::Logger::Log() << "Entity render";
-        return;
+        GFE::Logger::Log() << "Entity::Render";
     }
-    
+
+    void Entity::Update(float dt) {
+        GFE::Logger::Log() << "Entity::Update";
+    }
+
     bool SortEntities(const sf::Drawable* a, const sf::Drawable* b) {
         return a->GetPosition().y < b->GetPosition().y;
     }

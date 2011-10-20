@@ -16,8 +16,9 @@
 #include "GFE/Camera.hpp"
 #include <SFML/Audio.hpp>
 #include "GFE/Entity.hpp"
-#include "NameGenerator.hpp"
 #include "Mob.hpp"
+#include "MobPedestrian.hpp"
+#include "NameGenerator.hpp"
 
 namespace Keeper {
     
@@ -30,12 +31,11 @@ namespace Keeper {
         sf::View view;
         sf::Music music;
         std::vector<GFE::Entity*> objects;
+        std::vector<Mob*> mobs;
         std::vector<GFE::Entity*> cans;
         bool mouse_down;
         NameGenerator nameGenerator;
         Gender gender;
-        
-        Mob mob;
         
     public:
         GameState(GFE::Game* theGame);

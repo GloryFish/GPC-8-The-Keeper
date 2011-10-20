@@ -2,7 +2,7 @@
   "animations": {
     "stand": [
       {
-        "duration": 1,
+        "duration": 5,
         "rect": {
           "y": 0,
           "x": 0,
@@ -11,7 +11,7 @@
         }
       },
       {
-        "duration": 0.1,
+        "duration": 0.2,
         "rect": {
           "y": 0,
           "x": 8,
@@ -22,7 +22,7 @@
     ],
     "walk": [
       {
-        "duration": 0.1,
+        "duration": 0.3,
         "rect": {
           "y": 0,
           "x": 0,
@@ -31,7 +31,7 @@
         }
       },
       {
-        "duration": 0.1,
+        "duration": 0.3,
         "rect": {
           "y": 0,
           "x": 16,

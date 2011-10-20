@@ -1,39 +1,49 @@
 //
-//  Pedestrian.hpp
+//  MobPedestrian.hpp
 //  TheKeeper
 //
-//  Created by Jay Roberts on 9/18/11.
+//  Created by Jay Roberts on 10/19/11.
 //  Copyright 2011 GloryFish.org. All rights reserved.
 //
 
-#ifndef TheKeeper_Pedestrian_hpp
-#define TheKeeper_Pedestrian_hpp
+#ifndef TheKeeper_MobPedestrian_hpp
+#define TheKeeper_MobPedestrian_hpp
 
 #include <SFML/Graphics.hpp>
 #include "ConfigFile.hpp"
 #include "GFE/Entity.hpp"
+#include "GFE/AnimationStore.hpp"
+#include "Mob.hpp"
 
 namespace Keeper {
-    
-    class Pedestrian : public GFE::Entity {
+    class MobPedestrian : public Mob {
         sf::Texture spritesheet;
         sf::Sprite sprite;
-        std::map<std::string, std::vector<sf::IntRect> > animations;
+        
+        GFE::AnimationStore animations;
+        
+        std::vector<GFE::Frame> current_animation;
         std::string current_animation_name;
         int current_animation_frame;
         float current_animation_duration;
-        float animation_delay;
-        float speed;
-        bool flipped;
+        
+        
         
     public:
-        Pedestrian(void);
-        ~Pedestrian();
+        MobPedestrian(void);
+        ~MobPedestrian();
+        
         void SetAnimation(std::string animation);
+
+        virtual void Update(float dt);
+        
     private:
-        void BuildAnimations(ConfigFile config);
+        void Animate(float dt);
+        
         virtual void Render(sf::RenderTarget& target, sf::Renderer& renderer) const;
     };
 }
+
+
 
 #endif

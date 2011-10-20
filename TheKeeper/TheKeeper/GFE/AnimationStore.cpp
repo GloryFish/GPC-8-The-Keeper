@@ -30,6 +30,8 @@ namespace GFE {
             Logger::Flush();
         }
 
+        spritesheet_filename = pt.get<std::string>("spritesheet");
+        
         BOOST_FOREACH(boost::property_tree::ptree::value_type &a, pt.get_child("animations")) {
             std::string animationName = a.first;
             
@@ -60,6 +62,10 @@ namespace GFE {
     
     std::vector<Frame> AnimationStore::GetAnimation(std::string animationName) {
         return animations[animationName];
+    }
+    
+    std::string AnimationStore::GetSpritesheetFilename() {
+        return spritesheet_filename;
     }
     
 }

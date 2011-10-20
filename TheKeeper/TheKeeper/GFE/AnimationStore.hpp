@@ -23,13 +23,13 @@ namespace GFE {
     class AnimationStore {
         
         std::map<std::string, std::vector<Frame> > animations;
-        
+        std::string spritesheet_filename;
     public:
         explicit AnimationStore(const std::string &groupName);
         ~AnimationStore();
         
         std::vector<Frame> GetAnimation(std::string animationName);
-        
+        std::string GetSpritesheetFilename();
     private:
         void LoadFrames(boost::property_tree::ptree);
         

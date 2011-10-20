@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C95459891437889500F6B4A8 /* Mob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C95459881437889500F6B4A8 /* Mob.cpp */; };
 		C95459931437B4BA00F6B4A8 /* mobs.ani in Resources */ = {isa = PBXBuildFile; fileRef = C95459921437B4BA00F6B4A8 /* mobs.ani */; };
 		C9AE7C521423CA000000A9AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AE7C511423CA000000A9AC /* Foundation.framework */; };
 		C9AE7C551423CA000000A9AC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9AE7C541423CA000000A9AC /* main.cpp */; };
@@ -34,6 +33,8 @@
 		C9AE7CB3142697260000A9AC /* pedestrian.ini in Resources */ = {isa = PBXBuildFile; fileRef = C9AE7CB2142697260000A9AC /* pedestrian.ini */; };
 		C9B2BD5D143298310003598A /* AnimationStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9B2BD5C143298310003598A /* AnimationStore.cpp */; };
 		C9B2BD6014329F8C0003598A /* player.ani in Resources */ = {isa = PBXBuildFile; fileRef = C9B2BD5F14329F8C0003598A /* player.ani */; };
+		C9C4D88C144F8C3700012691 /* MobPedestrian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9C4D88B144F8C3700012691 /* MobPedestrian.cpp */; };
+		C9C4D890144F8D0300012691 /* Mob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9C4D88F144F8D0300012691 /* Mob.cpp */; };
 		C9CD64E21435685F00450406 /* female-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9CD64DF1435685F00450406 /* female-names.txt */; };
 		C9CD64E31435685F00450406 /* last-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9CD64E01435685F00450406 /* last-names.txt */; };
 		C9CD64E41435685F00450406 /* male-names.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9CD64E11435685F00450406 /* male-names.txt */; };
@@ -43,8 +44,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C95459871437882A00F6B4A8 /* Mob.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Mob.hpp; sourceTree = "<group>"; };
-		C95459881437889500F6B4A8 /* Mob.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mob.cpp; sourceTree = "<group>"; };
 		C954598D143799DA00F6B4A8 /* IAIComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IAIComponent.hpp; sourceTree = "<group>"; };
 		C95459921437B4BA00F6B4A8 /* mobs.ani */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mobs.ani; sourceTree = "<group>"; };
 		C9AE7C4D1423CA000000A9AC /* TheKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +91,10 @@
 		C9B2BD5C143298310003598A /* AnimationStore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimationStore.cpp; sourceTree = "<group>"; };
 		C9B2BD5E14329B100003598A /* AnimationStore.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AnimationStore.hpp; sourceTree = "<group>"; };
 		C9B2BD5F14329F8C0003598A /* player.ani */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = player.ani; sourceTree = "<group>"; };
+		C9C4D88B144F8C3700012691 /* MobPedestrian.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MobPedestrian.cpp; sourceTree = "<group>"; };
+		C9C4D88D144F8C4100012691 /* MobPedestrian.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MobPedestrian.hpp; sourceTree = "<group>"; };
+		C9C4D88E144F8CEA00012691 /* Mob.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Mob.hpp; sourceTree = "<group>"; };
+		C9C4D88F144F8D0300012691 /* Mob.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mob.cpp; sourceTree = "<group>"; };
 		C9CD64DF1435685F00450406 /* female-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "female-names.txt"; sourceTree = "<group>"; };
 		C9CD64E01435685F00450406 /* last-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "last-names.txt"; sourceTree = "<group>"; };
 		C9CD64E11435685F00450406 /* male-names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "male-names.txt"; sourceTree = "<group>"; };
@@ -116,8 +119,10 @@
 		C954598E14379A7C00F6B4A8 /* Mobs */ = {
 			isa = PBXGroup;
 			children = (
-				C95459871437882A00F6B4A8 /* Mob.hpp */,
-				C95459881437889500F6B4A8 /* Mob.cpp */,
+				C9C4D88D144F8C4100012691 /* MobPedestrian.hpp */,
+				C9C4D88B144F8C3700012691 /* MobPedestrian.cpp */,
+				C9C4D88E144F8CEA00012691 /* Mob.hpp */,
+				C9C4D88F144F8D0300012691 /* Mob.cpp */,
 			);
 			name = Mobs;
 			sourceTree = "<group>";
@@ -150,7 +155,6 @@
 		C9AE7C531423CA000000A9AC /* TheKeeper */ = {
 			isa = PBXGroup;
 			children = (
-				C954598E14379A7C00F6B4A8 /* Mobs */,
 				C9AE7C8C142427250000A9AC /* Entities */,
 				C9AE7C861423E2970000A9AC /* Config */,
 				C9AE7C7B1423CA4F0000A9AC /* States */,
@@ -245,6 +249,7 @@
 		C9AE7C8C142427250000A9AC /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				C954598E14379A7C00F6B4A8 /* Mobs */,
 				C9AE7C8F142427410000A9AC /* Player.hpp */,
 				C9AE7C8D142427350000A9AC /* Player.cpp */,
 				C9AE7CA11425A51D0000A9AC /* Trashcan.hpp */,
@@ -363,7 +368,8 @@
 				C9AE7CB1142692A20000A9AC /* Entity.cpp in Sources */,
 				C9B2BD5D143298310003598A /* AnimationStore.cpp in Sources */,
 				C9CD64E81435693600450406 /* NameGenerator.cpp in Sources */,
-				C95459891437889500F6B4A8 /* Mob.cpp in Sources */,
+				C9C4D88C144F8C3700012691 /* MobPedestrian.cpp in Sources */,
+				C9C4D890144F8D0300012691 /* Mob.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

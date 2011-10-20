@@ -17,6 +17,8 @@ namespace GFE {
     public:
         Entity(void);
         ~Entity();
+
+        virtual void Update(float dt);
         
     private:
         virtual void Render(sf::RenderTarget& target, sf::Renderer& renderer) const;

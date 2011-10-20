@@ -36,8 +36,10 @@ namespace Keeper {
         ~Player();
         void SetAnimation(std::string animation);
         void SetTarget(sf::Vector2f theTarget);
-        void Update(float dt);
+        virtual void Update(float dt);
     private:
+        void Animate(float dt);
+
         virtual void Render(sf::RenderTarget& target, sf::Renderer& renderer) const;
     };
 }

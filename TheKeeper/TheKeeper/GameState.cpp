@@ -28,7 +28,7 @@ namespace Keeper {
         camera.Reset(game->GetDisplayRect());
         game->SetView(camera.GetView());
         
-        sf::IntRect bounds(sf::Vector2i(0, 0), sf::Vector2i(background.GetSize().x, background.GetSize().y));
+        sf::IntRect bounds(sf::Vector2i(0, 0), sf::Vector2i(background.GetGlobalBounds().Width, background.GetGlobalBounds().Height));
         camera.SetBounds(bounds);
         
         // Open it from an audio file

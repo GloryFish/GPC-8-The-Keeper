@@ -28,9 +28,13 @@ namespace Keeper {
         void Tip(void);
         bool IsTipped(void);
         void Reset(void);
-    
+
+        virtual void Update(float dt);
+        virtual void SetPosition(sf::Vector2f position);
+        virtual sf::Vector2f GetPosition(void);
+
     private:
-        virtual void Render(sf::RenderTarget& target, sf::Renderer& renderer) const;
+        virtual void Draw(sf::RenderTarget& target, sf::RenderStates renderStates) const;
     };
 }
 

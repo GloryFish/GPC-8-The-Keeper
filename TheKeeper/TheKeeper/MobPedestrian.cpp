@@ -15,7 +15,6 @@
 namespace Keeper {
     
     MobPedestrian::MobPedestrian(void) : animations("mobs") {
-        flipped = false;
         speed = 75;
         bounds = sf::IntRect(0, 0, 0, 0);
         
@@ -25,21 +24,18 @@ namespace Keeper {
         prefix << "mob_pedestrian_" << mob_id << "_";
         animation_prefix = prefix.str();
         
-        GFE::Logger::Log() << "Using animation prefix: " << animation_prefix;
-        GFE::Logger::Flush();
-        
         std::string texture_file = animations.GetSpritesheetFilename();
         
         spritesheet = GFE::TextureManager::GetTexture(texture_file);
         sprite = sf::Sprite(spritesheet);
-        int scale = 4;
+        scale = 4.0f;
         sprite.SetScale(scale, scale);
         
         sprite.SetOrigin(0.5 * 8, 1.0f * 8);
         
         SetAnimation("stand");
         
-        SetPosition(350, 200);
+        SetPosition(sf::Vector2f(350.0f, 200.0f));
         SetTarget(sf::Vector2f(350.0f, 200.0f));
 
     }
@@ -59,7 +55,7 @@ namespace Keeper {
             }
         }
         
-        sprite.SetSubRect(current_animation[current_animation_frame].rect);
+        sprite.SetTextureRect(current_animation[current_animation_frame].rect);
     }
     
     void MobPedestrian::SetTarget(sf::Vector2f theTarget) {
@@ -114,14 +110,14 @@ namespace Keeper {
             movement = movement + avoid_ment;
             
             // Apply movement vector
-            Move(movement);
+            sprite.Move(movement);
             
             SetAnimation("walk");
             
             if (movement.x < 0) {
-                flipped = true;
+                sprite.SetScale(scale * -1, scale);
             } else {
-                flipped = false;
+                sprite.SetScale(scale, scale);
             }
         } else { // Get a new random target
             int top_edge = 185; 
@@ -130,10 +126,16 @@ namespace Keeper {
 
             SetTarget(newTarget);
         }
-        
-        sprite.FlipX(flipped);
     }
 
+    sf::Vector2f MobPedestrian::GetPosition() {
+        return sprite.GetPosition();
+    }
+    
+    void MobPedestrian::SetPosition(sf::Vector2f position) {
+        sprite.SetPosition(position);
+    }
+    
     void MobPedestrian::SetAnimation(std::string animation) {
         if (animation == current_animation_name) {
             return;
@@ -143,11 +145,11 @@ namespace Keeper {
         current_animation_name = animation;
         current_animation_frame = 0;
         current_animation_duration = 0;
-        sprite.SetSubRect(current_animation[current_animation_frame].rect);
+        sprite.SetTextureRect(current_animation[current_animation_frame].rect);
     }
 
-    void MobPedestrian::Render(sf::RenderTarget& target, sf::Renderer& renderer) const {
-        target.Draw(sprite);
+    void MobPedestrian::Draw(sf::RenderTarget& target, sf::RenderStates renderStates) const {
+        target.Draw(sprite, renderStates);
     }
 
     

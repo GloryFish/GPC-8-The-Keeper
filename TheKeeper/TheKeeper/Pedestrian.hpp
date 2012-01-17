@@ -32,7 +32,7 @@ namespace Keeper {
         void SetAnimation(std::string animation);
     private:
         void BuildAnimations(ConfigFile config);
-        virtual void Render(sf::RenderTarget& target, sf::Renderer& renderer) const;
+        virtual void Render(sf::RenderTarget& target, sf::RenderStates renderStates) const;
     };
 }
 

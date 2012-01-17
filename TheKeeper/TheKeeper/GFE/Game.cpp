@@ -104,7 +104,7 @@ namespace GFE {
         update_clock.Reset();
         
         // Loop while IsRunning returns true
-        while(IsRunning() && window.IsOpened()) {
+        while(IsRunning() && window.IsOpen()) {
             
             IState* currentState = stateManager.GetActiveState();
             

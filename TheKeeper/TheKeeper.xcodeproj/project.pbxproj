@@ -292,6 +292,7 @@
 		C9AE7C431423CA000000A9AC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = GloryFish.org;
 			};
 			buildConfigurationList = C9AE7C461423CA000000A9AC /* Build configuration list for PBXProject "TheKeeper" */;

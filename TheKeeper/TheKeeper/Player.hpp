@@ -28,7 +28,7 @@ namespace Keeper {
 
         sf::Vector2f target;
         float speed;
-        bool flipped;
+        float scale;
 
     public:
         
@@ -37,10 +37,12 @@ namespace Keeper {
         void SetAnimation(std::string animation);
         void SetTarget(sf::Vector2f theTarget);
         virtual void Update(float dt);
+        virtual void SetPosition(sf::Vector2f position);
+        virtual sf::Vector2f GetPosition(void);
     private:
         void Animate(float dt);
 
-        virtual void Render(sf::RenderTarget& target, sf::Renderer& renderer) const;
+        virtual void Draw(sf::RenderTarget& target, sf::RenderStates renderStates) const;
     };
 }
 

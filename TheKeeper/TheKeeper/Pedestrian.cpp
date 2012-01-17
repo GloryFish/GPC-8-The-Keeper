@@ -34,7 +34,7 @@ namespace Keeper {
         
 //        SetAnimation("stand");
         
-        SetPosition(64, 208);
+        SetPosition(sf::Vector2f(64, 208));
 
     }
     
@@ -42,7 +42,7 @@ namespace Keeper {
         
     }
  
-    void Pedestrian::Render(sf::RenderTarget& target, sf::Renderer& renderer) const {
+    void Pedestrian::Render(sf::RenderTarget& target, sf::RenderStates renderStates) const {
         
     }
 }

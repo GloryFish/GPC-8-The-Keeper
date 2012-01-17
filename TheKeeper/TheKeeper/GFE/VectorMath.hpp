@@ -10,8 +10,10 @@
 #define TheKeeper_VectorMath_hpp
 
 #include <SFML/Graphics.hpp>
+#include "Logger.hpp"
 
 #include <stdlib.h>
+#include <math.h>
 
 namespace GFE {
     

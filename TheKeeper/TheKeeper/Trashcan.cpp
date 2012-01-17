@@ -46,7 +46,7 @@ namespace Keeper {
         
         Reset();
         
-        SetPosition(x, y);
+        SetPosition(sf::Vector2f(x, y));
     }
 
     Trashcan::~Trashcan() {
@@ -55,7 +55,7 @@ namespace Keeper {
     
     void Trashcan::Tip(void) {
         tipped = true;
-        sprite.SetSubRect(tipped_frame);
+        sprite.SetTextureRect(tipped_frame);
         sprite.SetOrigin(1, 8);
     }
     
@@ -65,12 +65,23 @@ namespace Keeper {
     
     void Trashcan::Reset(void) {
         tipped = false;
-        sprite.SetSubRect(upright_frame);
+        sprite.SetTextureRect(upright_frame);
         sprite.SetOrigin(4, 8);
     }
     
-    void Trashcan::Render(sf::RenderTarget& target, sf::Renderer& renderer) const {
-        target.Draw(sprite);
+    void Trashcan::Update(float dt) {
+    }
+    
+    sf::Vector2f Trashcan::GetPosition() {
+        return sprite.GetPosition();
+    }
+    
+    void Trashcan::SetPosition(sf::Vector2f position) {
+        sprite.SetPosition(position);
+    }
+    
+    void Trashcan::Draw(sf::RenderTarget& target, sf::RenderStates renderStates) const {
+        target.Draw(sprite, renderStates);
     }
 
 }

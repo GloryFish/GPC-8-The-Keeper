@@ -19,15 +19,25 @@ namespace GFE {
         
     }
 
-    void Entity::Render(sf::RenderTarget& target, sf::Renderer& renderer) const {
-//        GFE::Logger::Log() << "Entity::Render";
-    }
 
     void Entity::Update(float dt) {
-//        GFE::Logger::Log() << "Entity::Update";
+        GFE::Logger::Log() << "Entity::Update";
     }
 
-    bool SortEntities(const sf::Drawable* a, const sf::Drawable* b) {
+    void Entity::SetPosition(sf::Vector2f position) {
+        GFE::Logger::Log() << "Entity::SetPosition()";
+    }
+
+    sf::Vector2f Entity::GetPosition() {
+        GFE::Logger::Log() << "Entity::GetPosition()";
+        return sf::Vector2f(0, 0);
+    }
+
+    void Entity::Draw(sf::RenderTarget& target, sf::RenderStates renderStates) const {
+        //        GFE::Logger::Log() << "Entity::Render";
+    }
+
+    bool SortEntities(GFE::Entity* a, GFE::Entity* b) {
         return a->GetPosition().y < b->GetPosition().y;
     }
 

@@ -21,12 +21,12 @@ namespace GFE {
             fps.SetColor(sf::Color(255, 255, 255, 175));
             fps.SetPosition(0, 30);
             fps.SetCharacterSize(16);
-            fps.SetString("");
+            fps.SetString("-");
             
             ups.SetColor(sf::Color(255, 255, 255, 175));
             ups.SetPosition(0, 50);
             ups.SetCharacterSize(16);
-            ups.SetString("");
+            ups.SetString("-");
     }
     
     StatDisplay::~StatDisplay() {

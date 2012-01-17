@@ -24,13 +24,12 @@ namespace Keeper {
         ConfigFile config(ResourcePath() + "player.ini");
         
         speed = config.read<float>("speed", 100);
-        flipped = false;
         
         std::string texture_file = config.read<std::string>("filename", "spritesheet.png");
         
         spritesheet = GFE::TextureManager::GetTexture(texture_file);
         sprite = sf::Sprite(spritesheet);
-        int scale = config.read<int>("scale", 4);
+        scale = config.read<float>("scale", 4.0f);
         sprite.SetScale(scale, scale);
         
         sprite.SetOrigin(0.5 * config.read<int>("width", 8), 
@@ -39,7 +38,7 @@ namespace Keeper {
         
         SetAnimation("stand");
 
-        SetPosition(64, 208);
+        SetPosition(sf::Vector2f(64, 208));
         SetTarget(sf::Vector2f(64, 208));
     }
     
@@ -57,7 +56,7 @@ namespace Keeper {
         current_animation_name = animation;
         current_animation_frame = 0;
         current_animation_duration = 0;
-        sprite.SetSubRect(current_animation[current_animation_frame].rect);
+        sprite.SetTextureRect(current_animation[current_animation_frame].rect);
     }
     
     void Player::SetTarget(sf::Vector2f theTarget) {
@@ -85,7 +84,7 @@ namespace Keeper {
             }
         }
         
-        sprite.SetSubRect(current_animation[current_animation_frame].rect);
+        sprite.SetTextureRect(current_animation[current_animation_frame].rect);
     }
     
     void Player::Update(float dt) {
@@ -107,23 +106,29 @@ namespace Keeper {
             movement = movement * speed * dt;
 
             // Apply movement vector
-            Move(movement);
+            sprite.Move(movement);
             
             SetAnimation("walk");
             
             if (movement.x < 0) {
-                flipped = true;
+                sprite.SetScale(scale * -1, scale);
             } else {
-                flipped = false;
+                sprite.SetScale(scale, scale);
             }
         } else {
             SetAnimation("stand");
         }
-        
-        sprite.FlipX(flipped);
     }
     
-    void Player::Render(sf::RenderTarget& target, sf::Renderer& renderer) const {
+    sf::Vector2f Player::GetPosition() {
+        return sprite.GetPosition();
+    }
+    
+    void Player::SetPosition(sf::Vector2f position) {
+        sprite.SetPosition(position);
+    }
+    
+    void Player::Draw(sf::RenderTarget& target, sf::RenderStates renderStates) const {
         target.Draw(sprite);
     }
 }

@@ -19,12 +19,13 @@ namespace GFE {
         ~Entity();
 
         virtual void Update(float dt);
-        
+        virtual void SetPosition(sf::Vector2f position);
+        virtual sf::Vector2f GetPosition(void);
     private:
-        virtual void Render(sf::RenderTarget& target, sf::Renderer& renderer) const;
+        virtual void Draw(sf::RenderTarget& target, sf::RenderStates renderStates) const;
     };
     
-    bool SortEntities(const sf::Drawable* a, const sf::Drawable* b);
+    bool SortEntities(GFE::Entity* a, GFE::Entity* b);
 }
 
 #endif

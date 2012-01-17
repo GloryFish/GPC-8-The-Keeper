@@ -24,8 +24,8 @@ namespace Keeper {
         GFE::Logger::Log() << "Mob::Update()";   
     }
 
-    void Mob::Render(sf::RenderTarget& target, sf::Renderer& renderer) const {
-        GFE::Logger::Log() << "Mob::Render()";   
+    void Mob::Draw(sf::RenderTarget& target, sf::RenderStates renderStates) const {
+        GFE::Logger::Log() << "Mob::Draw()";   
     }
 
 }

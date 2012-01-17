@@ -32,7 +32,7 @@ namespace Keeper {
         sf::Vector2f avoid;
         float speed;
         sf::IntRect bounds;
-        bool flipped;
+        float scale;
         
     public:
         MobPedestrian(void);
@@ -44,11 +44,13 @@ namespace Keeper {
         void SetBounds(sf::IntRect theBounds);
 
         virtual void Update(float dt);
+        virtual void SetPosition(sf::Vector2f position);
+        virtual sf::Vector2f GetPosition(void);
         
     private:
         void Animate(float dt);
         
-        virtual void Render(sf::RenderTarget& target, sf::Renderer& renderer) const;
+        virtual void Draw(sf::RenderTarget& target, sf::RenderStates renderStates) const;
     };
 }
 
